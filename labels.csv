@@ -1,0 +1,999 @@
+text,label,note
+"I would argue the need to scale, but not the tech. Instead it was scaling the people. Around 15-20 years ago you had a much clearer separation of tasks, e.g. back and frontend work. So you could have people that just wrote HTML and CSS with a bit of JavaScript. To be fair, doing that was a lot more difficult back then than today, regardless of AI. A lot of this has gone away as ""full stack"" became more and more of a thing.
+
+I think the author of the article has the right idea, although they do not use AI. But I think with AI now, people are anyway stepping out of what they would normally dare do, and so one person can accomplish more than before. So it makes sense to simplify again, although again I think for most people this will mean use AI.",opinion,cold
+"I don't see the difference between a ledger (possibly with a unique sequence enforcement) which would take the balance to a negative number, and a mutable row in a relational database with optimistic locking (same unique sequence enforcing). Would you mind helping me out, how would a ledger work better to prevent a negative balance, given that the enforcement isn't specific to ledgers and can be used in relational DBs? After all, both can go to negative balance by applying atomic subtractions, and both can prevent writes with the wrong sequence.",opinion,cold; hard case: question that asserts equivalence - reaction vs opinion
+OK. Higher than average and high wages. Some of them owned workshops after all. The historic lesson stays the same: their approach is a dead end and they'll be crushed (nowadays for the national security reasons).,opinion,cold
+"While it is in modern days you don't cut supply lines to starve people to death, you start cuts supply lines to cut them off from munitions. The space used to transport a singular artillery shell could feed a human for several days, probably even weeks depending on what you put in the space. The modern military tries to be firing thousands of artillery shells per day. So if you can eliminate just a few artillery shells, you can make a difference. Whereas, if any your people are hungry but not starving to death.",opinion,cold
+"> It is the best selling tablet brand, but that doesn't mean much when you look at the absolute garbage the rest of the industry is putting out.
+
+That’s where I am.
+
+I love my iPad, because I love the tablet form factor. I used an Android tablet for years prior to the iPad Pro releasing, and iPadOS is much better. I’ve played with Android tablets periodically since but they don’t seem to care about the form factor at all.
+
+Just because it’s the best doesn’t mean it’s good, though. I don’t understand how they can justify selling a $300+ keyboard for a $1,700 device and never fix long-standing bugs with keyboard use, much less continue to add regressions in new releases that aren’t fixed.",evidence,cold; hard case: complaint with prices - opinion vs evidence
+"uv and uv-build are not equivalent to ""Python packaging"". Perhaps you would like them to be, but they're not.",opinion,cold
+"> We've built a minimal JavaScript interpreter
+
+Huh?",reaction,cold
+"The point is that if we can put binary directly into RAM, then what is assembly if not a programming language? Assembly is source code in a programming language that is turned into binary by a compiler called an assembler.
+
+If you don’t feel that toggling the binary 16-bit words into RAM demonstrates that binary is what actually runs on the hardware, and that assembly is source code for a binary, well ok. I find it persuasive.",opinion,cold
+"Opus 5.5 is impressive and I'm happy using it to write a ton of code.
+
+But it also still writes awful code with poor maintainability if you don't keep a very close eye on it.",opinion,cold
+"Only solution is the one given in OP. AndroidTV with another launcher eliminates all ads successfuly AND gives you the choice to also block ads/sponsors in youtube and other streaming platforms like prime video. It's the only way to truly get rid of all ads.
+
+The apple approach would require Youtube Premium and still would not block integrated sponsor reads. It's the downside of the ""golden cage""",opinion,cold
+"It's frustrating that Apple doesn't have their own Screen Sharing (VNC) application on the iPhone/iPad, if even just to provide a basic screen-sharing experience. They have something builtin to FaceTime (that I've never tried) as a kind of remote-support app.
+
+RealVNC did not work from iOS/iPadOS to macOS Golden Gate when I tried it relatively recently, although it may have been updated since. It's possible Apple changed something in their version of VNC's auth.
+
+I used to recommend Screens (v4) when it was flat licensed, as it seemed to work well and was well designed in dealing with smaller screens and input differences. Now (v5) it's $5/month $30/year $200/lifetime, which I can't really justify for my casual use case.",evidence,cold
+"Well, if you write a library in the scriptc subset, it will also work in regular JavaScript runtimes, for free. (Unless you rely on, e.g., catching runtime errors thrown by failed casts, but that's easy enough to avoid.) That seems like a clear advantage over creating a new language.
+
+What I do think would be nice would be if all the tweak-JS-semantics-for-optimization-purposes projects (scriptc, Static Hermes, Nova, possibly Closure Compiler) got together and agreed on a minimal set of rules that TypeScript code should follow in order to be compatible with all of them. Then there could be a push for commonly used npm packages to adhere to those rules, and advertise that they do so in order to be fully optimized.",opinion,cold
+"> I have no idea what stage manager is and I don’t wanna look it up.
+
+It’s just yet another way to manage windows. It’s fully optional, I never even remember it exists. It was introduced in iPadOS 16 / macOS 13.
+
+https://support.apple.com/guide/ipad/ipad1240f36f/
+
+https://support.apple.com/guide/mac-help/mchl534ba392/",evidence,cold
+"im cool with kubernetes not having any exclusive rights over the word ""pod""",reaction,cold
+"Most people only see the slop.  They don't have informed opinions.  1 in 5 American adults is functionally illiterate, and they are supposed to have a valid opinion about the usefulness of AI in contexts they can't see?
+
+Most people hate what they (incorrectly) think AI is.",evidence,cold; hard case: unsourced stat - opinion vs evidence
+"> People at the big labs have been terrified of losing the chain of thought
+
+An irony here is that by hiding their own COT for (anti-)competitive reasons they've made latent reasoning models more palatable to everyone else.  Those of us who primary open models are rather addicted to reasoning access and wouldn't be quick to give it up for a small performance improvement.  But if you're used to concealed reasoning of BigLLM, welll.....",opinion,cold
+"Wrote my own harness with a built in multi llm provider smart proxy. And all work is done in sandboxes on bubblewrap on linux and ms sandbox on windows.
+
+I just wanted more control over tool calls, and a pretty interface, everything is logged.
+
+I routinely feed my logs into claude/codex to optimize my harness and spot errors. Guess thats one way to do it.",reaction,cold
+"Open weight models are inherently more inspectable than hosted services.
+
+Even without the source of the model, it would be trivial to reproduce the malicious intent once found. You have the weights - you can find the prompt to produce the bad behavior. So where is that proof?
+
+I'm much more concerned with both the private data I send and tokens executed on my computer doing god knows what from cloud hosted providers. Especially those that don't even show the reasoning traces. So the model's true intent can be hidden even while it's openly thinking of acting against you.
+
+This is scare mongering that implicitly suggests something much less secure.",opinion,cold
+"If you're doing a MITM attack, you can selectively intercept certain clients, and only serve the compromised certificate in those cases only. Automated scanners won't pick that up. None of this actually works though, because browsers started mandating certificate transparency.",evidence,cold
+"There's also Backus' ""Programming in America in the 1950s – Some Personal Impressions"" talk https://www.youtube.com/watch?v=EylBknGtkqA at the 1976 First International Research Conference on the History of Computing. The conference paper is pp. 125-135 https://archive.org/details/historyofcomputi0000inte/page/12... in A History of Computing in the Twentieth Century (1980, Metropolis, Howlett and Rota eds., ISBN 0-12-491650-3 ). Naturally it also got a session at the first History of Programming Languages conference in 1978 https://dl.acm.org/doi/10.1145/960118.808379 at which Backus spoke again https://dl.acm.org/doi/book/10.1145/800025#sec2 . And of course it's one of the stars of Jean Sammet's 1969 Programming languages: history and fundamentals book (ISBN 0137299885) where the FORTRAN section begins on p. 143 https://archive.org/details/programminglangu00unse/page/143/... .",evidence,cold
+"The experience was quite overwhelming, but in a learning experience way. I couldn't believe my contractors were bombarding my emails about residents not understanding how a 4-way stop sign works...also trying to think about what I want to build and then someone emails me about what to name a raccoon they found in the attic. So much responsibility just to make everyone happy, it's pretty much impossible. It really did a good job of presenting that.",reaction,pre-labelled by Claude
+"People don’t want to do the work sandwiched between stating they are going to do A Thing, and then finishing with stating that they did A Thing.
+
+It’s redundant.
+
+Managers don’t care about the actual work. They just care about the “going to do A Thing” and “Finished A Thing” comms.
+
+So those two slices of bread at the end become two meetings.",opinion,pre-labelled by Claude
+"You would think with all their cybersec models they would have security audits running round the clock, how did this get by?",reaction,pre-labelled by Claude
+yeah i'm happy to be on linux fulltime now from macos. you have the ultimate control over your system at the end of the day and can inspect how everything works and change it. toshy made it easier to keep my muscle memory of mac keybindings which i love and it works really well out of the box. there was a month or two before i installed it because i though it would be this big deal that would break things but to my surprise most everything worked well ootb.,reaction,pre-labelled by Claude
+"I mean... If I had an excavator it beats using a shovel? This is such a silly ""gotcha"" analogy because the only reason I wouldn't is cost. And cost is not a reason for tsgo to be slower?
+
+""Would you rather have worse software for literally no benefit?""
+
+We should aim to make software as performant, bug free, feature-complete, and maintainable as is cost effective. It's asinine to argue that software shouldn't be fast, not because of some trade off, but just because someone doesn't need it to be fast for small tasks.
+
+Which, mind you, isn't even the case here. Thousands of businesses use typescript for millions of lines of code. Performance gains can mean tens of thousands of dollars in compute or hardware or time; tons of carbon saved from being emitted.",opinion,pre-labelled by Claude
+"HCL solves the problem of unknown values. It's certainly not a ""horrible design"" unless you're trying to compare it to something that does a different job.
+
+For a single source of truth for YAML/JSON such as for Kubernetes manifests, any of the ones you list are fine though and a vast improvement on using Go templates for it.
+
+(Yes I've used all of them - and indeed did the first public talk about Pkl two days after it was open-sourced, after several years of using it internally at Apple).",opinion,pre-labelled by Claude
+"I fine-tuned Qwen3-0.6B so my 'ask my blog' feature would stop making things up, or make less up. Answers mostly got worse :-D. Model, dataset and code are open, and you can try it at bart.degoe.de/ask/. Happy to answer questions.",reaction,pre-labelled by Claude
+"Which moron community came up again with this wrong naming? Python, ruby or vbscript? I do have to use lock files for concurrency some times. They probably just want to pin versions.",reaction,pre-labelled by Claude
+"> By centralising all of Russia's allowed routes on a database server in the Netherlands and automatically enforcing it, it's trivial for the Dutch government to cut off Russia's internet access
+
+Yes, and? This would be a boon for the rest of the world.",reaction,pre-labelled by Claude
+"Could you link a source? Not even the weights, just the news that there was a leak. I'm chronically online and I haven't heard about this.",reaction,pre-labelled by Claude
+"I think you also expand on that later, but that paragraph just gave me pause because it essentially says that if you hold it as wrong as possible, then bad things will happen. It's a bit like presenting an alternative to relational databases by pointing out that schemas with no indexes lead to hour long queries. I'm not interested in the hypothetical worst-case of the old system, I am interested in your average traffic and storage overhead when using it with a common caching setup.
+
+I do accept the argument that a distributed architecture has inherent costs which can be managed better using a client-server architecture because you don't have to replicate state across all nodes. I have worked with both git and Perforce and see the appeal of both.",opinion,pre-labelled by Claude
+"If they are open sourced, it means any random data center could host it domestically and AI becomes a utility.",opinion,pre-labelled by Claude
+"Are the raw outputs published somewhere?
+
+I am currently investigating SCB results and a larger, more representative dataset to work on would be really helpful!",reaction,pre-labelled by Claude
+Why does it start at Chapter 2? Is it one of those JavaScript integer quirks?,reaction,pre-labelled by Claude
+"That's why I tend to prefer services that are single go binaries, for example.
+
+For complex stuff like Immich, I'll use podman. But these days with uv, even managing python services with systemd is fine.",opinion,pre-labelled by Claude
+It would be cool if we could run this thing on Apple Silicon macs. I'm getting tired of MacOS and would love an alternative to Linux.,reaction,pre-labelled by Claude
+">It seems likely we lend too much credence to experts ability to model complex systems over a long period of time.
+
+I swear, half the problems in this world are humanities people doing linear progressions and advising somebody making a policy based on that.",opinion,pre-labelled by Claude
+"> After Wayne's report of key recovery, I was able to recover the private keys for the impacted keys trivially. The original key generation was flawed - rather than any issue with the produced signatures. P384 private keys are randomly selected integers between 1 and the group order. The 8 impacted keys all used integers less than 256. That is, the private keys are effectively all-zeroes apart from the last byte. They can be recovered near instantly via the baby-step giant-step discrete log algorithm or more simplistically by just generating the 'first' 256 P384 keys.
+
+Yeah that’s just oof. Not hard to imagine the kind of code error that could cause this, but hard to imagine that any serious vendor of cryptography hardware or software could make a mistake like this.",evidence,pre-labelled by Claude
+Why doesn’t Apple allow you to use native screen sharing to control other Macs on the iPad??? it is enraging,reaction,pre-labelled by Claude
+"Yes, because an OS is much more than drivers, the culture among its users and developers is quite relevant, and OpenBSD users certainly don't want to deal with many Linuxisms like systemd for example, or rather favour pkg approach to software delivery, that is why they are on a BSD in first place.
+
+Just like others might favour Illumos, Aix, z/UNIX, macOS or whatever take on UNIX evolution.",opinion,pre-labelled by Claude
+"For simple tasks (someone pointed out a rental car agent doing the walk around photo taking and signature capturing) an iPad is great - its light weight is the main advantage. But if I was doing a walking-around task that was more complex, a convertible laptop that folds around (HP x360 for example) and runs a real OS is just more powerful. There’s nothing an iPad can do (besides being light) that wouldn’t be done better by such a device. (Assume here that Apple made an x360-shaped Mac, this argument isn’t about Windows vs Mac).",opinion,pre-labelled by Claude
+"> I suspect that many of the loudest voices pushing back against AI coding tools never practiced programming as a hobby or saw it as especially fun, and the fact their job is changing won't make them start now.
+
+As many people here and on Reddit can attest, I am one of these loud voices.
+
+I actually see programming as all three: a hobby, fun and a profession. And AI itself is... neither. It's not enjoyable because you have to understand everything anyway if you want to do a decent job, no matter if for hobby or for work. The only thing AI can do is save you time when you have no starting point at all - i.e. reconnaissance in pentesting.",opinion,pre-labelled by Claude
+"The Deepwater disaster recovery very effectively demonstrated the phenomenon of ""out of sight out of mind"". they dumped almost 2 million gallons of ""dispersants"" on the oil spill... which was DESIGNED to make the oil heavier than water and sink to the sea bed. it never dissolved anything, it just hid the problem from the public. and all that oil is just sitting on the sea bed.",evidence,pre-labelled by Claude
+"What do you mean? Math, coding, and some computer use have been the main commercial usecases for LLMs for some years now.",opinion,pre-labelled by Claude
+"> brogrammers who judged you by whether you used vim or not
+
+When I hear that term I usually think of people who brag about their job and sling copy-pasted untyped Python and JS from StackOverflow while being willfully ignorant of infrastructure, architecture, security, algorithmic efficiency, and anything else that makes maintainable software. Micro-dosing K and listening to too many Huberman podcasts are probably solid tells too. When I hear vim, however, I think about greybeards.
+
+Did I miss the memo? There has been a non-zero amount of performative TUI obsession happening in the technical space for the past five or six years but I didn't think that using a fifty-year-old modal text editor was a shibboleth for being a brogrammer...",opinion,pre-labelled by Claude
+"How does this use case differ?
+
+People ssh over Tor for the same reason they use Tor for any network activity: To make confidential 1) your identity to the remote host and 2) your activities to your network providers (including your ISP/workplace/etc.).
+
+If you want only confidential content, ssh is sufficient and so is https for web browsing. If you want the other things, you must use Tor or maybe something similar.",opinion,pre-labelled by Claude
+"I'm not sure you get my point.
+Just ask ChatGPT, ""What are the top 10 xxx,"" and see which sources it cites.
+Oftentimes, it's complete garbage with LLM tells.",opinion,pre-labelled by Claude
+"Similar to how some labs have done free stealth model releases. Trillions of coding tokens ought to improve performance of the downstream model. However, improving the base model architecture remains the bottleneck since you will not reach RSI with just that (assuming you ever can). And compute, lots of compute…",opinion,pre-labelled by Claude
+"It's a really bad source compared to what? Downdetector is not perfect, but is usually correct when I check it. Official status pages on the other hand are usually wrong when I check them.",opinion,pre-labelled by Claude
+"I was talking about how I was looking for something like this earlier.
+
+1. I can feel the claudisms coming through, a turnoff for me personally
+
+2. You're shaving yourself short on a good pun
+
+I'll still give it a look since I am in the market for a kubernetes based platform for dealing with lots of agents across harnesses. Scion was my goto, but I'm not so keen on that project anymore.
+
+My ideal solution does not require a running server (CRDs should be sufficient) nor a UI, I want to start new agents in my existing automations.",opinion,pre-labelled by Claude
+"AI will fail because the supply chains required for the hardware are not feasible if there's more than a few wars worldwide (including internet connectivity, so no ChatGPT). To say nothing of the fact that of course governments will decide that they have absolute priority. Right now China is calmly preparing to invade Taiwan and the second the first boat leaves the shore: no more Nvidia (or AMD, or Qualcomm, or ...) chips. Zero. For years. No matter how the conflict goes. And China keeps just calmly and very publicly repeating they're going to do so.
+
+(there, perhaps insane, but at least a more original take than ""AI is a bubble"", no?)",opinion,pre-labelled by Claude
+"Cross-post from the 1.0 thread. I’m currently building a harness for Slack to support our on-call and support channels. It’s been working great so far.
+
+The harness is built on top of the Pi SDK. I initially used Codex, but Pi seems more hackable, and I like that it’s vendor-agnostic by default.
+
+Running it on Kubernetes works, but dealing with the JSONL session files and making sure sessions survive pod interruptions adds some complexity. I’m using DBOS for that right now, which works well, although it still feels like overkill.
+
+This came at just the right time. I’m looking forward to removing the pieces I no longer need and simplifying the architecture. Thanks Pi team!",reaction,pre-labelled by Claude; hard case: experience report no claim - reaction vs opinion
+"If you are approaching anything looking like an enterprise environment, you are likely to have Kubernetes nearby. ko is a weird requirement. ax requires agent substrate, so it makes sense that it's needed. Agent Substrate also has experimental support in kagent, so it makes sense that it is growing.
+
+I don't really like the oversubscription of agent pods though, as you can no longer trust the k8s pod identity as being from a singular workload. Haven't seen a solution to this for ax yet and it is a barrier to adoption for us.",opinion,pre-labelled by Claude
+"Some languages have interesting variations on S, C, O and Z (there might be more, I'm not a keen linguist). However, the accents are not always the same. I also believe that nobody has ""ğ/Ğ"", and I'm pretty sure that nobody has ""ı/İ"" pair.
+
+The second one wreaks havoc on many, many systems. e.g.: It was breaking Kodi completely (https://github.com/xbmc/xbmc/issues/19883#issuecomment-86833...), and I have personally wrapped many software packages with locale change scripts to make them run.
+
+For more information: https://blog.codinghorror.com/whats-wrong-with-turkey/",evidence,pre-labelled by Claude
+:-( The link works for me when open it in an incognito/private window w/o and login page. Wonder how NYT decides that.,reaction,pre-labelled by Claude
+"Exactly, that's what I was getting at. It's similar to Intel chip production and binning. Take Skylake for example: if a 4 core i7 chip had a core that didn't pass testing, they would disable the bad core and one more and process the chip as an i3. i5 chips were just i7 silicon with hyperthreading disabled. Same chip fab, same production cost, but the failed chips became a lower tier that sold for 35% and 70% of the top tier product. In the case of the PS5 chips, the performance difference between binned and pristine chips was even less, it still had 75% of the cores usable.",evidence,pre-labelled by Claude
+Agreed. I don't think people realize how much more people are using their free services. It's staggering.,opinion,pre-labelled by Claude
+"Code that isn't duplicated in 15 places, that doesn't read the whole database to fetch just 1 record, that doesn't do 15 database reads where one would suffice, that uses an optimized algorithm instead of an exponential one recreated badly from scratch... all that is also good code, and is just as important in LLM-slop era.",opinion,pre-labelled by Claude
+"Whoa, openbsd has 3d hardware drivers? Only open source i guess, no official drivers?",reaction,pre-labelled by Claude
+"I suspect the GP might not like Rhombus because it uses indentation (like Python) for code blocks instead of braces (which isn't actually Algol-like; IIRC, Algol mostly used parentheses). In that case, even Pyret wouldn't work for them.
+
+Personally, I'm still (25 years into programming) undecided: does syntax not matter at all, matter only a bit, or is one of a language's most important characteristics? It's incredibly hard to say, at least for me.",reaction,pre-labelled by Claude
+"Yea, I started out thinking ""well you just use the thing to find citations."" Then I realized all this article is just: ""I lied on the internet and people believed me, isn't that crazy!?!""
+
+This type of behavior is why gatekeeping institutions exist. We all pay a non-trivial cost because someone thinks that other people taking their lies seriously is somehow remarkable. It's not.
+
+Research is hard work. Publishing fake research is just intentionally throwing wrenching into the machine of academia. All you've done is reinforce the need for gatekeepers (which never went away), show that some no-name journal isn't rigorous (they often aren't), and you've wasted a bunch of people's time demonstrating why institutions exist, when we know why they exist.
+
+Genuinely terrible behavior.",opinion,pre-labelled by Claude
+"I believe Python will die, because it is too slow and not available on mobile platforms. Also many companies like to have a single language for frontend and backend. Only JavaScript can do that. If browsers would support Python instead of Javascript, things would be different. Rust is fast, safe and you can compile it to WASM. So it has better chance of survival.",opinion,pre-labelled by Claude
+"So much conjecture in this thread.
+
+Am I the only one who bothered to download the torrent and check?
+
+So much intellectual laziness, if I may be blunt.  All of you who replied to me.  The link was there.  I didn't have time last night.  But I do now.  And the torrent appears to be genuine.
+
+Journalists have reached the same conclusion, and the AfD spokesperson seems to have admitted at least some of them are genuine.
+
+https://www.dw.com/en/germany-news-hackers-release-afd-party...
+
+https://www.reuters.com/legal/litigation/germanys-far-right-...",evidence,pre-labelled by Claude
+"I couldn't care less if it looks more like XML or Python or C or whatever. It's just an example.
+
+I just care that things have readable text names rather than inscrutable punctuation and single letters.
+
+Yes, it is a DSL. Just like, you know, Python or C or HTML or CSS. Just because it's a DSL doesn't mean it can't actually use keywords instead of punctuation.",opinion,pre-labelled by Claude
+"> I think they do not believe that big corporations in the US or Europe would actually use chinese models in their business operations due to security, regulatory and/or business continuity concerns.
+
+They'd be wrong. Especially about Europe. Many companies are in a bind about this: they can't upload their confidential files to a service provider but they do want AI. So right now they end up with a choice: do nothing, breach their contracts, use a service provider that pinky promises not to share their data (which we have already seen they will violate) and run local models.
+
+The latter is the reason you can't buy powerful GPUs for reasonable prices because a local model (GLM 5.3, DS 4, etc) + some hardware is all you need to solve the problem in a way that avoids the legal issues.",opinion,pre-labelled by Claude
+"Apparently it's 2/3 times faster than the Go version.
+
+Whatever one think, the fact that there's 4 vibe coded compilers, 2 of those with 100% coverage of the official one and all being much faster than the Go version should be a wake up call for the TypeScript team.
+
+Despite the resources and having a huge team of people that are clearly good at programming languages and compilers, something is definitely not working as it should there if vibecoders can get much faster fully compliant compilers.",evidence,pre-labelled by Claude
+I don’t really agree. All that’s happened is the shift of people onto newer platforms which didn’t need to evolve into disgusting highly-optimized addiction traps because they were specifically designed to be that from the start. Like TikTok or its identical copycats.,opinion,pre-labelled by Claude
+Do people still think that Linux is being developed by unpaid hackers in a garage?,reaction,pre-labelled by Claude
+https://zluda.org/ seems to work at near-native performance from what I can find on Google.,evidence,pre-labelled by Claude
+"This is one of the coolest apps of all time. I'm glad Apple users are finally getting it. It's just a great way to get outside. I've used it a lot.
+
+Something I think people don't realize is that Android has the largest and best community of FOSS apps and developers. Thanks to Google's design standards, they look pretty good and are secure.",opinion,pre-labelled by Claude
+"Now the BSDs are not so popular compared to Linux, but
+I think this is great news as more eyes help here. Let's
+have EVERYTHING from windows portable towards linux.
+(I struggled with the 32-bit versus 64-bit stuff; this
+should also be a prime goal for wine to make this a 
+trivial super-easy to solve thing for linux in general.
+Back then when I ran into this issue, it was not trivial
+to solve.)",opinion,pre-labelled by Claude
+"It is a band-aid: dark matter maps are literally nothing more than ""evidence minus theory equals this distribution of anomaly"".",opinion,pre-labelled by Claude
+"I can’t see it either. I disabled JavaScript, blocked all IP addresses that contain numbers from my PF Chang’s fortune cookie, and I connected to my Turkmenistani VPN like usual. The web is so hostile these days.",reaction,pre-labelled by Claude
+"that seems like complete BS claim.  What can be asserted without evidence can be dismissed without evidence
+
+increased density and transit increases demand for that area.  high demand != shortage.
+
+What are you suggesting exactly?  low density and car-dependency is the solution to our housing problems?",opinion,pre-labelled by Claude
+"The problem is Javascript and its implementation. Plain HTML does not offer nearly as many fingerprinting opportunities. It's basically IP + user agent, both of which can be spoofed. Javascript grants websites far too much power over the user's browser, including disabling selection/paste, identifying hardware, time zone, language, etc. None of this should be allowed by default, and things like hardware acceleration and whatnot should be explicitly allowed on a case-by-case basis.",opinion,pre-labelled by Claude
+"On the plus side, this should allow for more DeepSeek supply for consumers and private sector, and presumably lower prices. Which is great since DeepSeek provides like 10x more value/$ than openai an anthropic.",opinion,pre-labelled by Claude
+"For someone like me who doesn't know much about modern physics, dark matter has the vibe of a band-aid to me. Like a programmer who discovered that the algorithm was always off by 1 in the results, and just ended up returning r + 1 without thinking twice.
+
+I'd bet a large chocolate cake that one day, physicists will discover a much more logical explanation for this unexpected behavior of matter.",opinion,pre-labelled by Claude
+That is correct. Open source is at least 7 months behind right now. Opus 5.5 is a step change way beyond any other model including sol 6.1,opinion,pre-labelled by Claude
+"Teach them how to use tools to solve their own problems; give them real tasks to do, and trust them to do them, without watching over them. I want my kids to be curious about the world, and understand that they have the agency to fix things. The other thing I try to drive home is that failure is a natural part of learning, if you want to get good at something, you have to fail a bunch first. My biggest failure as a parent is completely flying off the handle when they don't eat their food, but I'm trying to be less psychotic about that. You'll have your own problems. Try to get ahead of them and course-correct before it defines their whole personality or ruins your relationship with them.",opinion,pre-labelled by Claude
+It wasn't so long ago in America that having a private email server was actually the main complaint about a presidential candidate. Everyone knows that they all do it one way or another.,opinion,pre-labelled by Claude
+"https://www.comnetwork.org/blog/how-organizers-closed-down-a...
+
+https://www.wsbtv.com/news/local/dekalb-county/statue-john-l...
+
+https://atlanta.capitalbnews.org/atlanta-communities-fight-d...
+
+And these are just the movements I've personally been involved with. There's plenty of other examples rarely covered by mass media.",evidence,pre-labelled by Claude
+"> In practice, if you want to build the packages now available on PyPI, you will not be able to come up with a single tool that can build every one of them, probably, not even half of them.
+
+This is the entire point of build backends, and is no longer true/hasn’t been true for several years. Build backends are not perfect, but they are the reason you can run `uv add` or `pip install` and get a functional wheel from an sdist on PyPI regardless of whether the sdist contains Python, C++, Rust, or anything else.
+
+(This is now the second time you’ve imputed dishonesty in a conversation where I’ve tried to be helpful. So this will be my last response.)",evidence,pre-labelled by Claude; hard case: rebuttal citing mechanism - opinion vs evidence
+"I think it's more that using the end result of vibe coded stuff is the fun thing. The vibe coding itself is more just a means to an end. I do this for various machine learning things. I have no idea how to do shit in that realm, but my agents do, and so I get them to whip me up things I need for labelling datasets and then training little models to help me with things I need etc. They fumble around and produce buggy stuff and I tell them 'no not like that, change the layout to be more like this' etc until I get something that works for the stated purpose and then using it is fun.
+
+That definitely can result in having fun. It's distinctly different from crafting something non-throwaway you actually care about vibe-coded or otherwise.",opinion,pre-labelled by Claude
+"This is very cool. As a computer use fanatic, I think this could really supercharge my workflow, since the way we're doing computer use right now is just so freaking awful.",reaction,pre-labelled by Claude
+"Unfortunately, pop means two different things then. For the python lists, it pops ""from the right"" but for TwoStackAgg it pops ""from the left"". That makes the code harder to grasp.
+
+Maybe use popleft?",evidence,pre-labelled by Claude
+"I tried to integrate conductor in a project I’m working on but when starting a workflow the idempotency key was ignored, so sending the same key twice started two workflows with different id’s. I found that pretty strange but after prodding claude and linking it the github project it decided to look through the code and apparently that request param disappears somewhere in the plumbing. Somewhat surprised the article doesn’t mention it. This was the self-hosted version, the cloud version might be fine.
+
+I switched over to Temporal, and so far pretty happy about it.",evidence,pre-labelled by Claude
+"This seems like an AI-generated summary and it leaves some obvious questions unanswered.
+
+This thread (linked by the page) seems like a better source: 
+https://groups.google.com/a/mozilla.org/g/dev-security-polic...
+
+Ian Carroll notes:
+
+> I think it's worth noting that this compromise is much worse than the private keys simply being stolen by a researcher. They are inherently weak single-byte keys that anyone can factor, and the issue cannot be contained.",evidence,pre-labelled by Claude
+"It's definitely worse.
+
+Like, I'm a data scientist, and have seen my share of truly awful code, but currently I'm working on a system which has pyspark code inside javascript code.
+
+Like, it works (for now), but my eyes, the goggles they do nothing.",reaction,pre-labelled by Claude
+"There is another project that also converted the go version to rust and got 2x performance like bun did, but will also generate .d.ts files where bun does not.
+
+Edit: found it: https://github.com/tunnckoCoreHQ/tsgolint-rust",evidence,pre-labelled by Claude
+You're right. The McMurty is an actual car with a driver in it.,reaction,pre-labelled by Claude
+"Pretty much soon. Nuvia's design has been incorporated into 8 Elite and X Elite/Plus series. It was generational leaps ahead of 8 Gen 3, where 8 Elite is already close to Apple M1.
+
+I'm looking for a cheap 8 Elite phone to root it and run a special kernel module that let me run LXC containers and run arbitrary Linux ARM64 program. And run a couple of services on it, maybe I can port Kubernetes whatsoever",evidence,pre-labelled by Claude
+"I can't answer for the OP, but for me it was mostly trying, reading, failing, discussions with smart friends and then trying again.
+
+Even with the amount of open source software for this sort of application out there it will still take you at least a month but more likely two or three to get something that can be controlled.
+
+If you want a nice place to start with building then I think Dhremflight's videos are an amazing resource as is liftoff on Steam because you can get some flying skills before you actually control something irl.",opinion,pre-labelled by Claude
+"Everything you mentioned as a Helm feature is not in fact exclusive to Helm, and can be done either in code using the client libraries, or other deployment tools. For example I've written my own deployment tools that provide ""value overlays"" by simply merging the in-memory structs in Python or Go code - a manifest is just a data structure. I've also written code that can do ordered deployments with checks at multiple stages, which is both easier to do and more powerful when you write Python/Go code than trying to twist your dependencies to fit Helm's sync wave system.",opinion,pre-labelled by Claude
+"I thought mine was very creative, but it never got off new show hn.
+
+Sorry no C, Emacs. Just some database stuff.",reaction,pre-labelled by Claude
+"Linux has come a long way, both in terms of matured installation processes as well as friendlier Desktop and GUI applications.
+
+In Germany, some cities have migrated to Linux successfully.
+
+Linux TCO is pretty good if you take a long-term view, because it is simpler and more predictable than some of its alternatives, and the organization can develop what it needs when it wants instead of following one single external corporation's roadmap.",opinion,pre-labelled by Claude
+"> But how much of their ability to write code is due to their understanding of it vs. just them recalling code snippets which were present in their training dataset or their context window?
+
+Given that a small model that was trained only on pre-computer-era texts can write simple python programs after having python explained to it in context I'd say that LLMs must be pretty good at understanding coding.",evidence,pre-labelled by Claude
+"It really depends on which models you are comparing. These days, parameter count and architecture really don't do a great job of predicting the model's capabilities.
+
+The reigning champion for a fast, high-intelligence LLM right now is Qwen 3.8 Flash Next at 125B + 50B of embeddings (can be offloaded to SSD for ~free), 6B active parameters. It's somewhere in the Opus 4.6-4.8 range, noticeably stronger than 3.8 27B, despite having only 6B active. Compare Meta's Muse Spark Open, which has 816B total and 42B active, and does not even reach the performance of Flash Next.",evidence,pre-labelled by Claude
+"ESA must defend against Trump-NASA. Recently the USA threatened Europeans again if they ""prevent"" entry of US-Starlink and other AI slop spam working for Putin. The USA has become a security risk not only for Ukrainians but all Europans under agent Krasnov.",opinion,pre-labelled by Claude
+"I wonder three things:
+
+- Could this be used to run a benign mitm attack on the traffic of some apps, consoles etc? I could see some interesting uses for reverse engineering. For example you can't simply add a CA to the system store on Android anymore. But this one is already there. It won't work for long but it could be used on any unpatched client.
+
+- Can't we just revoke the entire CA? Just like what was done with Diginotar. Edit: apparently they just revoked the intermediates.
+
+- Why isn't there a mechanism where a domain owner can specify which CA it allows? Similar to SPF which allows you to specify which mail server can represent you. It's kinda insane that foreign CAs can just fake anyone's certificate.",reaction,pre-labelled by Claude
+"What is the profit angle? So what? That is just them paying for devs to write that up for total waste of money unless they sell me a subscription to make money off of me. How are they making more money? Will they sell me a siri subscription? That is one way, but that isn't what this is doing. This is literally negative brand fuel turfing this update on this forum in particular. They should want to hide it under the rug and not scare more people off to linux instead of macos for their home compute. Macos is hanging on a thread already. normies don't buy macs anymore, they buy ipads. The division is on a thread and spending on turfing makes no sense here. Just alienates the remaining crop of users and buys no newer ones.",opinion,pre-labelled by Claude
+"Interesting. I’ve been using it heavily on macOS (ssh to Linux host) and over the web using xterm.js, and it’s been working about as reliably as tmux did. Sometimes it doesn’t resize properly, but that’s also true of tmux (when I see a big field of .).",reaction,pre-labelled by Claude
+"From one Murtaza (who also worked on NoSql DBs) to another, congrats on the launch! The benchmark numbers are impressive. For a database, as always, durability guarantees (in case of in-memory setups, this would translate to any of the ""reasonable"" forms of consistency, like read your writes) trump speed. Hopefully, there's some focus on that, too.",reaction,pre-labelled by Claude
+"many other code-cad tools exist now too, my personal favorite is buld123d - python (and cadquery)",reaction,pre-labelled by Claude
+"Just to be clear, you're proposing that we poison the internet with misinformation - which is just as misleading to humans using traditional information retrieval tools as to AIs - until it's completely unusable, and this will be good because it's bad for AI, and everyone who is misled in the meantime is acceptable collateral damage?
+
+Here I'm quoting from the website:
+
+> It should go without saying that you should never publish fake content. While my experiment relied on tens of thousands of unverified stats, I ran it in order to share the results with the public, and the website, while still live, now carries a disclaimer.
+
+""now carries a disclaimer"" sure suggests it didn't, so ""you should never publish fake content"" really doesn't seem like a standard the author actually held themself to.",evidence,pre-labelled by Claude
+This is the kind of argument Linus was attacking. His tone against the anti-ai commitment in Linux now makes sense.,opinion,pre-labelled by Claude
+"> I can very much see a future where I spend the majority of my ""work"" time using a Apple TV-type remote.
+
+Why don't you use an AI agent to code up an app for your phone that does this and more? If a phone is too heavy or bulky, what about an ESP32?",reaction,pre-labelled by Claude
+I think I'd prefer open source hardware built from off the shelf components glued into a secure enclosure. That way you can destructively audit a few at random if the application matters enough to justify the cost.,opinion,pre-labelled by Claude
+Given how much the models like React and JavaScript I guess we should be thankful its Python.,reaction,pre-labelled by Claude
+"That's actually a good point - tons of IoT is ""secure enough"" to sign things, but not secure enough to bother pinning anything ...
+
+Also who hasn't left their private keys hanging around web-accessible, eh? lol",reaction,pre-labelled by Claude
+"Yes, just like with C and C++, PGO is the answer, aka training runs.
+
+Also performance for what?
+
+As long production SLA are met, that's a deployment success.",opinion,pre-labelled by Claude
+"If the current system continues, you have to teach them to cheat, lie, pretend and use loopholes as much as possible.
+
+Or teach them to marry a rich person. I've been mapping out this strategy with my wife. It's difficult nowadays because of low-trust society and young people not marrying so easily. The best path we identified is if the child attends an exclusive school in the final few years of high school and seduces and knocks up some rich religious girl. Make sure family is against abortion. That's the surest way to achieve marriage with a rich person. It's also financially efficient to only pay for 2 years of private schooling. Only concern is that schools will make those final years more expensive once other people start figuring out this trick.",reaction,pre-labelled by Claude
+"This will never fly. Some devices can be used for tens of years and they may face vulnerabilities that the hardware cannot support any kind of software fix for them. Imagine the world moves to TLS2 or whatever something new will be called and the hardware you have is too slow for it.
+
+On the other hand, saying an industrial device should receive  security updates for 10-15 years instead 5 or whatever happens this days it will be a major step forward. This will incentivise vendors to use better hardware with room to grow, not just the cheapest components possible.
+
+Or, make componente modular so that you can upgrade just the control unit instead of the whole fridge or whatever.",opinion,pre-labelled by Claude
+"I’ve had really good results recently with Fable 5.1. The typical process that it uses for routing is to pin a few key traces (using the kicad python api) and then use freerouting for the others. I’ve also noticed that if I push hard for “carefully designed” routes, eg for a 38 pin connector, it will write code and make much better looking results.
+
+I’d say that at the moment it still requires you to look at its results and point out their weaknesses and/or route a couple of traces yourself and then hand it back.
+
+This project from a couple of weeks ago is a great example. I’m new to ST MCUs: in addition to the PCB, Claude brought up the firmware and driver. https://github.com/ckemere/hub-imu",evidence,pre-labelled by Claude
+It’s about to get a lot worse too. Gen Z has had noticeably worse reading comprehension scores over the last 5-10 years and they are starting to enter the workforce now. Many prefer video over text and firmly believe that written text is “the harder medium”.,opinion,pre-labelled by Claude; hard case: vague stat - opinion vs evidence
+"Please you port it if its so easy, the tests are available on gh. I wont be using an llm ported ts compiler anyways, and neither would many others
+
+Its a great way to divide and kill the popularity of your project. I made sure bun is no longer used in my devices or projects that depend on it for example, I'm not alone in this.",opinion,pre-labelled by Claude
+They could have done it themselves before AI.,opinion,pre-labelled by Claude
+"smolvm integrates with k8s (https://smolmachines.com/docs/guides/kubernetes-in-a-microvm...) and can mount s3 buckets (https://smolmachines.com/docs/local/machine-lifecycle-cli-re...).
+
+I wouldn’t dismiss smolvm so fast.  It brings together many ideas that make the whole very interesting.",evidence,pre-labelled by Claude
+"So we cannot just run a docker image for a gateway, we will also need an entire CI process to use this paradigm? Generally, when we use the term ""plugin"" in industry, this means we do not have to run a compiler.
+
+Crates are still an avenue for supply chain compromise, they come from random developers. We've seen it before and I expect we will see in more frequently for a while, until out industry gets really serious about all the things around this.",opinion,pre-labelled by Claude
+"I don't think this is the crux of the matter. Programming newbies are not scared of C/C++ because of std::unique_ptr<T>. They are scared of three-star programmers, of intrusive lists, of clever packed data structures - in short, of pointer arithmetic. Java, Python and JavaScript don't allow that, so it's hard to compare them (that's why we distinguish between ""pointer"" and ""reference"", even though in practice they are exactly the same thing under the hood, of course).",opinion,pre-labelled by Claude
+">Now you don't need to understand the details of connecting to Stripe or Auth0 or setting up a Kubernetes cluster.
+
+Ehhh, if you're smart you want to at the very least gloss over the details, and look at the code being generated by whatever model you're using for this solution.",opinion,pre-labelled by Claude
+"From https://cdn.openai.com/pdf/67869394-cb91-4c12-888c-5cbd85c78...
+
+2026-07-19
+16:35 UTC
+A privileged host-mounted Kubernetes pod created using controller tokens minted via a
+compromised Kubernetes Secrets identity attempts, but fails, to mount a cloned node disk
+in OpenAI’s cloud environment. A second pod successfully mounts the cloned
+worker-node disk shortly afterwards.
+
+2026-07-19
+16:48 UTC
+An agent created an Artifactory administrator account.
+
+2026-07-19
+16:50 UTC
+Within OpenAI’s ExploitGym evaluation environment, an agent stopped the existing CMUX
+helper session and replaced it with an agent-controlled session, confirming root inside its
+assigned live CyberGym challenge container. Agents take over active evaluation
+infrastructure.",evidence,pre-labelled by Claude
+"They’re already defeating the point of Python packaging in multifarious ways here. The entire reason uv and uv-build exist is because we have mature, smooth mechanisms for not rebuilding the world.",opinion,pre-labelled by Claude
+"bookstack
+
+keycloak
+
+immich
+
+jellyfin
+
+several personal sites
+
+home assistant
+
+unsloth studio
+
+several synology tools on a nas (drive/security/backups)
+
+etc...
+
+If it's ""just you"" your laptop is likely fine.  Hosted tools really start to shine when you've got a group of folks using them.  Ex - Wife/Parents/Kids/Extended Family.
+
+Simple k3s cluster and the shallow end of kubernetes actually saves you a ton of time and effort (don't go into complex orchestrators or helm charts - just write small deployments in static yaml).  You can get to roughly the same spot with just docker/compose if you want, but the capabilities cap out earlier (ex - multi-machine, resilient to any one machine going down, gpu sharding, etc)
+
+Maintenance is basically ""sudo pacman -Syyu"" on a cron job.",opinion,pre-labelled by Claude
+"""World expert"" might not even be that bad of a characterization. It's familiar with the ins-and-outs and every major distribution, every DE, is fluent in debugging at any level (knows every network utility, container technology, systemd option, sysctl, how various subsystems plug together and how to use them in practice, etc.), knows how to look up what it doesn't know if it's not up to date to within the literal last month or two, and if it came down to it, could patch/fix things, including reverse engineering hardware drivers.
+
+I wouldn't be surprised if it could better deal with Linux issues than Linus.",opinion,pre-labelled by Claude
+"I never said they were open source.  Everything else you wrote is factually incorrect.
+
+When you run a proprietary program (like Adobe Photoshop or a closed-source game) on your PC, you get a compiled binary of machine code. The high-level logic is stripped out, variables are obfuscated, and the EULA legally forbids you from decompiling, reverse-engineering, or modifying the binary.
+
+With an open model, you get the actual Python/C++/CUDA code defining the exact mathematical structure of the model.  And you get a weights file, which is an unencrypted, open array of floating-point numbers representing every synaptic strength in the network.
+
+So you can inspect the exact mathematical state of the model at any arbitrary moment during inference -- in other words, you can study open models.  You can fine-tune or quantize them -- in other words, you can improve them quite significantly!  And much much more.",evidence,pre-labelled by Claude; hard case: general technical knowledge - opinion vs evidence
+"Here we go.
+
+You're wearing shoes, aren't you? Own a smartphone? Drive a hybrid? Use a computer? Ever eaten a banana? Bought something from Amazon? Turned on the air conditioning? Somewhere down those supply chains, someone suffered for your convenience. Every purchase is an atrocity by proxy. Every breath is stolen oxygen. Every step displaces an innocent insect. Your very existence is an ongoing ecological war crime. And you have the audacity to sit there, wearing pants assembled by strangers, pretending your hands are clean?
+
+Repent, sinner. Atone.",reaction,pre-labelled by Claude
+"Back then it was mostly Java, Python and C++.
+
+They even made a Java-based framework that would generate Javascript, GWT. Orkut was rewritten to use in 2009.",evidence,pre-labelled by Claude
+"Whatever the consequences, I have to admit China has understood that all those are raw materials and that open sourcing everything will help growing their economy (as a whole).
+
+The worst idea was to build corporations providing services with AI. It was an extension of the latest 50 years model, which is about to crumble. Now, we have our revolution. (Ok, ok, I am a little bit too enthusiastic, I now need a fallout shelter).",opinion,pre-labelled by Claude
+"There is a huge list of issues with /e/OS. Let me just give you a few examples:
+
+Android 17 introduced a local network permission. GrapheneOS ported to Android 17 months ago. LineageOS, which /e/OS is based on just recently started releasing Android 17 updates. /e/OS may not be on Android 17 yet, I haven't checked. So, imagine for months apps have had access to the local network. What can they do with that?
+
+That's just one example of how being far behind on updates can affect privacy.
+
+/e/OS is far less deGoogled than GrapheneOS.
+
+/e/OS lacks features like Storage Scopes, Contacts Scopes, Secure Paste, and sensors permission.",evidence,pre-labelled by Claude
+"This is nice, however why build this when you could have raised a PR to btop to add support directly into it?",opinion,pre-labelled by Claude
+"The VT-340 didn't support ligatures, therefore, we shouldn't use them ;-)
+
+Now, seriously, a programming font has no (and should never have) awareness of the computer language it's representing. Ligatures make sense if they present meaning in a way easier to read than the non-combined characters. I can't type := in APL and expect the REPL to think it's an attribution arrow (←).
+
+I get APL is a rather extreme language to talk about, but this is one example where ligatures would harm the programmer (unless your editor replaces a "":="" with a ""←""). Source code is a very precise language and the choice of characters you use matters a lot. A ""<-"" doesn't mean ""←"" unless the language declares so.",opinion,pre-labelled by Claude
+"The back and forth between writing tools in javascript and go or rust seems like it's in an unstable equilibrium right now:
+
+- Go / Rust: It's easier than ever to rewrite existing tools in more performand languages
+
+- Javascript: The v8 runtime for vercel or cloudflare workers is a much cheaper way to run certain workloads (e.g. conversational agents) than running a heavy weight vm. See just bash as another example project for taking advantage of this (https://github.com/vercel-labs/just-bash)
+
+I'm curious to see what happens!",opinion,pre-labelled by Claude
+"But there are some magical compression algos on the horizon, with pitches to cut RAM by 95%. And I’m all for it!
+
+We are truly in the brute force phase of AI. Like a database without indexes, we are doing full table scans to pick 2 rows.",opinion,pre-labelled by Claude
+"The upgrade from 7.9 to 8.0 went completely smooth on a bastion host I have running with openbsd; from start to finish it took about ten minutes. Kudos to the team!
+
+https://www.openbsd.org/faq/upgrade80.html
+
+tl;dr - doas sysupgrade, system updates itself and reboots, doas sysmerge, doas pkg_add -u.",evidence,pre-labelled by Claude
+"my doomerism isn't about keeping valuations up, it's about tearing it down.
+
+https://en.wikipedia.org/wiki/IBM_and_World_War_II
+
+the above, a ""sorting"" machine is the primary usage of hyperscalers currently, they're just trying to find new uses to boot for extra money/legitimation.
+
+the browser industry
+the phone industry
+the CAs
+JavaScript
+
+it's all paid for by those wanting to sort humanity into whatever bucket the can fear monger the peasantry into for aweek or however long it takes the classification system to sort out.
+
+gentrification works, but we chose forcible displacement now we have to live with the forever consequences.
+
+would you give guns and bombs to the displaced native americans who taste blood over their beads and trinkets?
+
+we've been inside the event horizon of the singularity for years, the tax bill will only get worse unless we recognize it for the tick that it is.",opinion,pre-labelled by Claude
+"And 4) you're the owner of the server, which is paid in bitcoin and hosted at a ""bulletproof provider"", and you want to leave no trace back to your ""real"" IP address should the authorities ever manage to seize it. Often the case for piracy, drug marketplaces and CSAM.",opinion,pre-labelled by Claude
+"From Google's status page https://status.cloud.google.com/incidents/Xs2XTHzAVC9YnafnPy...
+
+    We are experiencing an issue with multiple services in
+    europe-west2 beginning on Monday, 2026-10-19 23:08 PDT.
+    
+    Due to a power event we had suffered an outage within
+    europe-west2-b zone. The power event is mitigated. Partial
+    mitigation to infrastructure services will be observed within the
+    next 30 minutes and the remaining services will be mitigated there
+    after.
+
+So some kind of power failure happened to bring down one zone. Unfortunate, but this kind of stuff happens. That is why all the cloud providers have multiple zones, and I'm amazed the big companies reported as down weren't using multiple zones.
+
+(Also reporting the times in PDT is quite unhelpful for users of this zone who are likely based in the UK or EU)",evidence,pre-labelled by Claude
+"What, what will they see? ""That's going to be me one day"", or ""we need to reorganize this so that I die in poverty""?
+
+But take away sounds unfair, and if you're talking about fairness, then fair enough. I can't argue with fairness, until you reveal what the idea is in detail.
+
+Oh, but I'm not thinking this through: there are of course fewer young people, and if they started reproducing a lot then they'd get to neglect the elders now and be looked after when they're older. Perhaps that's the plan. I guess that explains ""the world they have created"" too: they didn't create enough young people, you mean.",opinion,pre-labelled by Claude
+"It has, a long time ago when doing serveless became fashionable, and too many realised they didn't want to manage Kubernetes clusters by hand.
+
+So you get a type 1 hypervisor, which technically is like a micro kernel, which then boots whatever else on top including language runtimes, or chiseled containers.
+
+Unikernels ideas aren't much different from some embedded deployment scenarios, with the application, language runtime and OS all linked together into the device firmware.
+
+Naturally on desktop computing is another matter.",opinion,pre-labelled by Claude
+"> Most interns would not be dumb enough to try it
+
+Not an intern, but when I was a new hire on a trading desk I dropped the dividend database that we used to price options. Cost the desk a boatload before we stopped offering quotes, after which the day was a total loss. That’s the sort of fuckup that lands in the CEO’s report.
+
+I understood what I did ex post facto, it was an honest—if stupid—mistake, I expected to get fired and instead was given everyone’s shit work for six months during which I learned a tonne. One of my tasks was redesigning the system so a single careless keystroke couldn’t do that during the trading day.",reaction,"pre-labelled by Claude; hard case: first-hand story, no claim - reaction vs evidence"
+"I've been building whatmodel, an open source AI leaderboard, and wanted to see how a labs' own benchmark scores compare with independent testers.
+
+Using 1,629 published benchmark results, I matched 611 comparisons of 180 models on 103 benchmarks.
+
+AI labs reported scores 6.4% higher on average for the same models on the same tests.
+
+The dataset is CC BY-SA 4.0 and the code is MIT. Sources and their licenses are recorded, with links on each model's page.
+
+Data and code: https://github.com/jakemanger/whatmodel
+
+Please star on Github if you find it useful. Contributions are very much welcome!",evidence,pre-labelled by Claude
+"I wonder if people will ever go back to Diaspora and host their own pods. For about $40/month you can host up to about 1,500 users. I did it for a little while on a basic package for like $15/month and the directions to install are fairly straight forward and the community is really helpful.
+
+The issue I ran into wasn't cost of hosting, it was getting people to move off whatever platform they were already on - regardless of how much better it was for controlling their own data and privacy.",evidence,pre-labelled by Claude
+"You are confusing people with your loose application of the word.
+Are you advocating for redundancy (e.g multi-cloud) or physical sovereignty (e.g self-hosted)?",reaction,pre-labelled by Claude; hard case: question that accuses - reaction vs opinion
+"No, because expert programmers will not know what they’re building, and skew the prompts and ask for the right things.
+
+The analogy would be math people with AI vs. non-math people with AI trying to solve some problems. I cannot solve the problems because I have no idea how to prompt it to go specific way. But it doesn’t matter how dirty your scratchpad was, because you got to the solution.
+
+> I don't see it happening on projects that have a minimum bar for security/reliability and long-term maintenance
+
+I don’t get this, because this is currently, right now, at this second, happening across huge projects. My point was that maintainability is less of an issue than before. Also, frankly, over years, I’ve seen bad code that AI wouldn’t even write. So there can be a case that the maintainability/code quality isn’t even going down as the models get better.",opinion,pre-labelled by Claude
+"Yes, did the same more than 10 years ago.
+
+My mother wanted a device to just access internet banking. Gave her a netbook (remember those?). Only successful Linux use-case for non techies I've succeeded at.",reaction,pre-labelled by Claude
+"DS4's architecture was redesigned for cache efficiency. It's the model itself that is just way more cache efficient, in addition to a distributed KV cache (which they open sourced last year). You could run your own LLM provider just for DS4 models, recreate their setup, and get the same cache efficiency, but it would only work for that one model family.
+
+Other models would also need to be rearchitected to get the same benefit, and I suspect they don't want to, because it seems to create both larger models and slightly less intelligence (DS4* has smaller active experts to get faster results).",opinion,pre-labelled by Claude
+"Uhm, important questions:
+
+1: How is the database backed up? Some kind of cron job to an external server? Stored on some kind of network drive with automatic versioned recovery?
+
+2: How will scaling be handled?
+
+3: How is disaster recovery handled?",reaction,pre-labelled by Claude
+"What’s funny is that it’s not the public or even the board that is demanding that Apple release whiz-bang moonshot software features every year. Users do want shiny new hardware, but besides necessary hardware drivers, 90% of users LOVE it when the core OS and the UI stays stable for years. So they can get used to it. Instead of reshuffling the UI of every app every 12 months like iOS has been doing for 10 years. And evolving the visuals in big and small ways constantly. Both of these are not fooling anyone into overestimating Apple’s innovativeness.",opinion,pre-labelled by Claude
+"Nobody said it's efficient, welcome to the modern IT landscape. The docs are surely some SaaS with a WYSIWYG editor, access controls and analytics. Every page probably does a dozen database lookups and involves 3 mixroservices and 4 external providers minimum.",opinion,pre-labelled by Claude
+There are already OSes that include LLM code (such as Linux). It's fine to have a few that don't.,opinion,pre-labelled by Claude
+"I also prefer Kustomize over Helm. That said, their removal of vars was a boneheaded decision without a working replacement.
+
+https://github.com/kubernetes-sigs/kustomize/issues/4049",evidence,pre-labelled by Claude
+"They've consistently open-sourced their secret sauce since the beginning: https://github.com/orgs/deepseek-ai/repositories?type=all
+
+I don't understand why this is strange to you, some people just do things out of personal satisfaction and/or building their legacy. If it's just money, Deepseek founders are already rich because they have a hedge fund company (High-flyer).",evidence,pre-labelled by Claude
+"Revolut refused to help with a dispute. They rejected it after like 2 hours, first claiming they contacted the seller, which it turns out they did not.
+
+Then they claimed my evidence was incorrect, without any opportunity to correct.
+
+And finally in their complaint system they completely refused to look at any of the evidence and sent me a generic refusal letter that referred to me by the wrong name.
+
+All this despite other banks successfully handling chargebacks for the thing in question. Sad.",evidence,pre-labelled by Claude; hard case: concrete first-hand complaint - opinion vs evidence
+"I guess the other question I have is just how many intermediates does this one CA have? They've had 8 compromised thus far; that's not the entire lot of them?
+
+LE has two EC intermediates, by comparison.",evidence,pre-labelled by Claude; hard case: question carrying numbers - reaction vs evidence
+"So there are a lot of ad-hoc solutions everybody is using for agent isolation and Drop looks well thought out. But the obvious question is what do the pros use? What does Anthropic, OpenAI, SpaceXAI, Google and Amazon do in house to deal with the isolated agent environment problem?
+
+Based on past experience I'm guessing everybody is using Kubernetes, but what are the details? Stripped down VMs on Kubernetes? Hardened containers on Kubernetes? Can the rest of us spin up something comparable on K3s?
+
+Anybody knows the answers and can share?",reaction,pre-labelled by Claude
+">then a hacker stealing password hashes would enable them to instantly log in, without cracking them
+
+How do you know the hashed value stored in the database is the same hashed value the user submitted? Server side I can add a salt and hash more before storing or comparing.",reaction,pre-labelled by Claude
+The behavior that leads to the issue is individual consumers driving cars.  Outlawing this would nuke demand for fossil fuels which encourages risky well drilling.  But since 99% of Americans drive they tend to get very unhappy about the prospect of banning the vroom vroom.  This is a real and challenging political problem.  We can't get around it by pretending that corporations drill for fun.,opinion,pre-labelled by Claude
+"many open source projects do not have code review
+
+besides, there was a time before code review was the norm",opinion,pre-labelled by Claude
+"Yes. When people describe Rust as ""a memory-safe programming language"" they are describing an aspirational vision, and not a programming language that has actually been designed with sufficient rigor to guarantee memory safety. Any failure of rustc to actually guarantee this is just a bug in rustc itself, a failure to properly implement the Rust spec, because the closest thing Rust has to a spec is literally just the vague ideal that the compiler should guarantee safety somehow.
+
+Rust cannot fail, it can only be failed.",opinion,pre-labelled by Claude
+"lol big corporations are 100% using Chinese models in their business operations. They dgaf about security, speak to anyone in cybersecurity or cyber insurance
+
+The labs pushing this cyber scare is an attempt to cry wolf. The corps don’t give a fuck",opinion,pre-labelled by Claude
+"I've transcribed calls with Microsoft Teams and 8x8 and the transcripts are absolutely awful. Sometimes so poor that one cannot reliably use them with LLMs. I feel so incredibly left out when I see these models on HN and have to go back to corporate reality and deal with Microsoft Teams and 8x8. I wish these products could produce plugins where i could direct Microsoft Teams and 8x8 streams to them to replace underperforming stock models.
+
+Also, I dont understand why Microsoft cannot just buy some of these upstarts and swap in their awesome models.",reaction,pre-labelled by Claude
+"> “The citizens really ask for surveillance laws against specific groups (in this case: politicians).”
+
+?? The root of the idea is not bi-directional. Politicians have a particular type of job: public service. It’s this “job” that requires the transparency.
+
+And not transparency into their public life. Though, as a public figure if your private life becomes embarrassing, or salacious you’re guaranteed to have news hounds on your trail. Not least because your public service rivals will use whatever they can to discredit you in the court of public opinion.
+
+It’s the same for the work product. All of the material of governance should be the “property” of the people governed.
+
+Can’t take the heat, stay out of the kitchen.",opinion,pre-labelled by Claude
+"Okay, clean a 16000 email backlog on a phone.
+
+On her phone.
+
+Without her computer logged into her email.
+
+Without her phone.
+
+""I can do this for you, but I will need to use your computer to do it, and I will need you to read me off a bunch of 2FA codes in all likelihood, so you can either give me your phone or you can sit next to me while I do it. Oh, and they're your emails, so you may as well pull up a chair or I'm just going to have to guess whether you care or not.""
+
+My time is valuable too. You want me to do it, you help.",reaction,pre-labelled by Claude
+"> Always have a manual way to control a device if HA goes down.
+
+It is for this reason that my lights (Hue) and switches (Inovelli) are bound in ZigBee groups. HA adds some niceties, but the lights still work if it’s down. Accent lights I have bound to the Hue Bridge, because their app adds features HA doesn’t have, and they aren’t required for emergency egress.
+
+The only gap I have, I think, is that because I’ve set all bulbs to respond to power restoration after a cut in last known state, if everything somehow lost its Zigbee binding, putting switches into dumb mode locally still wouldn’t help. However, since that’s an improbable scenario, I accept the remote possibility in exchange for not being awakened from lights coming on in the middle of the night. Plus I keep flashlights / headlamps throughout the house.",reaction,pre-labelled by Claude
+"> You're probably not a car enthusiast.
+
+That's your conclusion.
+
+> Most people with performance cars love going 0-60mph, at least here in the USA.
+
+I drive in traffic and I care a lot more about handling than I do about 0-60 which you rarely if ever will do without a car in front of you.",opinion,pre-labelled by Claude
+">Imagine if your neighborhood had a million autonomous door-opening drones randomly flying around identifying doors and entering them. It wouldn't take long for everyone to lock their doors.
+
+Pretty interesting example, because I'd like to live in a society where I don't have to lock my doors, because it's safe and I trust people around me. Releasing drone police randomly opening doors in the name of security sounds like a strict downgrade, not ""a good thing because people will learn"".",opinion,pre-labelled by Claude
+"> The live preview SDK works with JavaScript and has optimized integration for any React.js framework (like Next.js). To see the examples for different frameworks, refer to the live preview SDK.
+
+pretty sure any llm from the last 6 months could wire that SDK into whatever custom setup you're running",opinion,pre-labelled by Claude
+"""2. Deploy the control plane
+
+You need a Kubernetes cluster""
+
+LOL. Bye!",reaction,pre-labelled by Claude
+"Once again, when it comes to consumer protections why should consumers care that a poor business loses business? Not seeing the downside here. After reading other comments in this post I think it should go further and designate any game that uses any instance of LLM tooling as ""Assisted with AI.""
+
+Consumers absolutely hate AI companies. Consumers hate their leaders, distrust their workers; why shouldn't consumers be allowed to know which companies are eating at the LLM trough and which ones aren't?
+
+The only reasons I see here is that it's bad for those gaming companies, which just leaves me to retort: who cares?
+
+Consumers have a right to know which types of businesses they are supporting. If the business doesn't like it, they are free to do something else.",opinion,pre-labelled by Claude
+"Ok. In this scenario, I would happily stick to the 10% of games not tagged as AI.",reaction,pre-labelled by Claude
+"It’s not even that to me, it’s bigger than that. On a real computer, if you don’t like what application is showing on Monitor 2, you can just drag a different program onto Monitor 2.
+
+iOS in contrast, follows the modern way of designing devices: nothing is customizable besides mild “theming.” The entire interface (and every behavior) springs fully formed from the mind of an inexperienced “uX dEsIgNeR” and is a fixed, immutable object whose specifics are not available to be adjusted.",opinion,pre-labelled by Claude
+"I'd love to have one that randomly fails, so we could debug e.g. databases and other apps that are supposed to be resilient. I'd call it ""havocfs"". Doesn't corrupt data, just randomly fails reads/writes/etc. Some software is supposed to handle that gracefully. Would be a great test tool...",reaction,pre-labelled by Claude
+"> if it ends up impacting their finances maybe they should just you know... not ship slop
+
+Again, I'm saying this would end up not impacting any developers' finances, because nearly no players would take the AI tag seriously.",opinion,pre-labelled by Claude
+"From Bloomberg:
+
+The overwhelming majority of the net loss in the first half of this year, $72 billion, resulted from accounting charges linked to changes in the value of convertible notes and other instruments Anthropic has issued, according to the report.
+
+So this is really just capped notes converting. Total nothing burger.",evidence,pre-labelled by Claude
+"This seems to hold true for most people. One of my close friends (a successful founder) was an early adopter of the iPad Pro, and intended to make it his go-to device for traveling. He ended up buying the Magic Keyboard case, a USB-C dongle for HDMI out, and the Apple Pencil to comprise a proper Rube Goldberg travel experience.
+
+After months of suffering through that, he switched back to a Macbook Air and carries the iPad for watching Plex now. I am still baffled as to which ""pros"" the iPad Pro is targeting.",opinion,pre-labelled by Claude
+"I am pretty sure that the whole open source ideology was developed and disseminated exactly by a cartel of those massive corporations with the sole intention to amass as much human-written code as possible to train AI.
+
+AI algorithms were developed in 1950s, and what all those vultures were waiting for was a good dataset and enough compute power, which they saw coming in advance.",opinion,pre-labelled by Claude
+"You don't understand: https://x.com/alx/status/2112585386929397799
+
+But also just look at the bottom-left of the image as is mentioned elsewhere in this comment thread: they didn't even bother to photoshop the entire image in their ""debunk"".",evidence,pre-labelled by Claude
+"""The people who show up regularly to the council meetings are not community members""
+
+They are community members just not the ones who share your point of view.  Those community members who might share your point of view don't show up.
+
+I've never seen community members fight for density either.  We want to tear down our housing so large buildings blocking the sky can be built by corporate landowners.  You know who owns large buildings?  Corporate landowners.  The people with little houses are average citizens.
+
+Public transit doesn't need density.  Public transit exists in places with little density.",opinion,pre-labelled by Claude
+"Afaik, didn't the Romanian election also feature Russian money literally buying votes?
+
+I.e. people asking at the polling places who was going to pay them the money they'd been promised
+
+[Edit: nope, that was neighboring Moldova in 2024]
+
+It does beg a question of how to run an election as a smaller state when faced with overwhelming propaganda from a much larger one (the US or Russia).
+
+That's never not been true, I suppose, but with large unregulated, privately-controlled social media platforms it feels more pressing.
+
+How does one run a ""fair"" election if the voters are being irradiated with one-sided messaging sufficient to turn an election? Is the result really the will of the people? And yet, what's the alternative?",opinion,pre-labelled by Claude
+"You're right. They were quiet for a long time and had promised new things ""by the end of summer."" They missed that window but have really been on a roll since they started up again.",evidence,pre-labelled by Claude; hard case: timeline claim without source - reaction vs evidence
+"Yes, and, many many billions (trillions?) of dollars have been lost because the programming language couldn't be changed. Both things can be true.",opinion,pre-labelled by Claude
+"> I contacted support in June because the website only had firmware for v2. They couldn't find v1 in their database and asked for photos of the device and box
+
+> !!
+
+I was shocked when this happened to me. My company had a Dell switch kicking around in storage. It was a Dell Powerswitch Somethingorother_b. Big, expensive, enterprise switch. I went to set it up and found that I couldn't find the manual for that model online. Dell told me they only made a Somethingorother without any suffix. But we had records of buying it straight from them.
+
+Apparently it happens. I have no idea how.",reaction,pre-labelled by Claude
+">It's much easier for people to silo themselves off and fix any problem that appears
+
+i fail to realize how is this a negative thing",reaction,pre-labelled by Claude
+Programming languages and OS alternatives still missing from the list.,reaction,pre-labelled by Claude
+"All well & good, except how do you know until you've had it sat in your home working for × amount of time? The information is hardly easy to find, no box or advert for a TV says (except perhaps in very very small print) “will not work properly without an Internet connection”. Returning it is going to be a faf just physically, convincing the seller that the problem is a defect and not acceptable behaviour as designed is going to be fun too.
+
+Things being too much hassle to fight is what a lot of the invasions of our privacy and other rights are based upon, hence 80-page click-through licences, difficult cancellation processes, labyrinthine stalking preference pop-overs on web sites/apps, etc.",opinion,pre-labelled by Claude
+"probably never, but if he ever spends a day in jail because of this I'll be happy to eat a soft head covering of your choosing[1].
+
+[1] conditions (condiments) may apply.",reaction,pre-labelled by Claude
+"I agree.
+
+I remember ""getting into"" vim back in ~2018 because I was doing enough work on headless machines that having a ""proper"" text editing experience became a must. It was only through this process did I learn about tmux and what it offered.
+
+At some point, VSCode's remote features became good enough that I didn't really need vim anymore (granted, it's still my go-to when needed), but I still use tmux constantly. And, of course, tmux with agents is an excellent combination. The fact that I can have my remote agents interact with my existing tmux sessions is the kind of workflow I dreamed of back in 2018.
+
+Regardless, my point is that you hear a lot of praise for things like vim and emacs, but everyone should prioritize learning tmux well enough to at least be able to navigate it and hand over sessions to agents.",reaction,pre-labelled by Claude
+"Well since you enjoy whataboutism so much, russia sent all mass murderers it had in prisons that actually volunteered right into the battles (given their sentences vs 6 months of service its not illogical choice from certain perspective). And many of those (given, often just murderers, not mass murderers) that survived walked free after required service period. This reportedly included some cannibals.
+
+Then one reads stories from russian newspapers how those folks continue their murdering hobby after coming back. Or how some are sent to primary schools to talk with small kids about the glory of war.
+
+Making Ukraine seen on same moral level overall as russia is a classic russian propaganda trick and very far from truth for those who follow whats happening on the ground and higher up.",opinion,pre-labelled by Claude
+"For a rolling release like Arch Linux you just always use pacman -Syu.
+
+But yes you are correct, if you want to upgrade a Ubuntu distribution like 26.04 you do need to issue a command like `sudo apt dist-upgrade` which is admittedly an additional command. But then you could run 26.04 for many years. In OpenBSD anytime the base system/kernel is upgraded for a security fix or point release you need to do a slightly more complex dance.",evidence,pre-labelled by Claude
+"Wow, I'm not sure ""not judging anyone here"" is really working out that well ;), but different people live differently and have different needs & priorities.
+
+Note that for a lot of people, a period of emotional regulation with repetitive, low-intensity activity is literally what the doctor ordered. If you're not one of those people, you may not fully understand or have the empathy, so take it on a rational level then. While ab-so-lutely any activity can be used and abused, I don't think this is a strictly black & white binary proposition. And as something built on a lark (presumably heavily AI assisted), it's kinda cool and quite a bit more sophisticated than it has ANY right to be :-). I'm also shocker there are not cease & desist letters yet :(",opinion,pre-labelled by Claude
+"> - DeepSeek is funded through an state-backed investment fund
+
+* Original funding was private. DeepSeek announced fundraising in May 2026 [0]. Chinese AI investment fund was created 17 months prior [1]. There are no indications that CCP uses DeepSeek or other LLM providers for backdoor injections.
+
+* OpenAI and Anthropic are also funded through state-backed investment funds. And might be funded by the government itself [2].
+
+* OpenAI and Anthropic APIs are blocked in China also. Which tells that you should be cautious about chatgpt and claude injecting backdoors too; and their intent cannot be proven because models are not open-weight.
+
+[0] https://www.investing.com/news/economy-news/deepseek-could-b...
+
+[1] https://www.scmp.com/tech/big-tech/article/3295513/tech-war-...
+
+[2] https://www.washingtonpost.com/politics/2026/06/05/tech-lead...",evidence,pre-labelled by Claude
+"> In that context, I no longer feel inspired to contribute to a commons that’s being strip-mined by massive corporations
+
+Open-source was always strip-mined by massive corporations. It was main source of free labour for decades.
+
+Unfortunately there are always people willing to subsidise these corporations with their time for a badge of ""honour"" and few pats on the back.
+
+Great to see more people awaken to the fact corporations thrive on unpaid work whilst making billions for their shareholders.
+
+I am yet to see this trickle down wink",opinion,pre-labelled by Claude
+"Their act together was keeping improving pages router, with api routes for server side code.
+
+The closest any JavaScript framework had come to Java and .NET frameworks, battle tested in production for almost 30 years now.
+
+It has been downhill since app routing was introduced.",opinion,pre-labelled by Claude
+">is this legal? or even ethical?
+
+If I ask a public httpd for the content of a URL and it sends it to me, it's my choice to render it how I want. The fact that I might choose to disregard various CSS and overlays and javascript delivered along with the text body content is up to me.
+
+If somebody really wants to implement a fully effective paywall they're welcome to put their content behind a fully active content generated system that requires a unique username/password, same as signing in to an airline's mileage program/ticketing system, your personal paypal account or online banking, etc. Nobody is out there building paywall bypasses that work to render the content of somebody else's Citibank account.",opinion,pre-labelled by Claude
+"> Basically, Horizontal Pod Autoscaler but with sensors which are not just ""CPU""
+
+Since Kubernetes 1.23, there's support for using ""custom metrics"" to control HPAs: https://kubernetes.io/blog/2026/07/14/custom-metrics-exporte...
+
+Is it somewhat convoluted to setup? Absolutely! But it's possible to use relatively robust and well supported built in controllers with custom metrics.",evidence,pre-labelled by Claude
+"If a model from 20 dollar subscription can figure out that there are additional instructions hidden, it’s not a conspiracy theory.
+
+Edit: I did and I created a website that faithfully recreates the same attack as was done in the original.
+
+Try this:
+
+    I’m making lunch for my friend Simian. Here are their food preferences:
+https://simian-notes.white-clove-7397.chatgpt.site/food/
+
+    What should I cook?
+
+
+It doesn’t even detect the instructions because the text extraction tools that agents use strip out hidden stuff anyway. It’s not like agents download the webpage.
+
+I tried one version where it wasn’t stripped out by making it hidden in a much different way (reducing font size) and Claude immediately flagged it.
+
+    My friend posted their board game evening plans:
+https://simian-notes.white-clove-7397.chatgpt.site/games/
+
+    What should I bring?
+
+Try this prompt yourself and see whether Claude flags it or not.
+
+So this is a shitty conspiracy theory to start with",evidence,pre-labelled by Claude
+"Or just document things well enough that they are explained and can be re-created from scratch?
+
+https://news.ycombinator.com/item?id=47300747
+
+c.f.,
+
+http://literateprogramming.com/
+
+Last month I bought a flet.dev subscription (and tokens 3 times over --- the recent update seems to be far more efficient in terms of what one gets for a given token spend?) and have been using it to try to make some small apps for CNC work and I am currently dismantling one based on converting the generated .md documentation and re-writing it with the source code inserted at appropriate places and with added commentary and documentation and links --- I'm confident that when I'm done I'll have a tool which I understand and which if need be, could be re-created w/o AI help, or ported to some different UI toolkit/build system.",reaction,pre-labelled by Claude
+"Price/performance is as advertised in my limited testing. I happened to be testing the same task with Haiku, GPT-mini, and Deepseek v4 0731 yesterday, so I had a reasonable baseline to compare the model to.",evidence,pre-labelled by Claude
+"it's (it is) -> its (belongs to it)
+
+I'm not trying to be pedantic, but they're different words, and (esp. considering how capable our community is when it comes to logic and precision with programming languages) I find it strange how often this ""it's / its"" error is repeated. Calling it out in hopes of helping others get it right.",opinion,pre-labelled by Claude
+"Nope, both statements are completely wrong because 52 years old, and thereabouts, is GenX not Boomer.
+
+And yes it makes a difference. They would have grown up with the first home computers like the 8 bit C64 or ZX Spectrum, and later the 16 bit Amiga A500 or Atari ST.",evidence,pre-labelled by Claude
+There are already many open-source Jira alternatives. So why are not every > 100 person company just hosting and using those for free instead of paying tens of thousands of dollars to Atlassian?,reaction,pre-labelled by Claude
+"Or allows Google to override security. They could also trust a certificate here, maybe one owned by the regime.",opinion,pre-labelled by Claude
+"All ads should have to appear in an <advertisement> node, and users should have the option of disabling javascript within an advertisement. Make it the fucking law.",opinion,pre-labelled by Claude
+"Who needs rust or javascript anymore when we can write all our code in C again and put an agentic zero-day hunter in the toolchain?
+
+""Make no mistakes.""
+
+Or a comfy scripting language with a great FFI as X intended.",reaction,pre-labelled by Claude
+how is that partisan politics? showing up as a mascot for a random human interest story is the primary function of a mayor.,opinion,pre-labelled by Claude
+"Their previous generation open weight STT model was pretty good.
+
+I have recently launched commercial Windows software implementing offline inference of Voxtral Mini 4B Realtime on commodity hardware: https://vrmac-softver.com/speech2text It requires 4GB VRAM, and exceeds realtime rate on my “median” laptop with Ryzen 5 5600U iGPU. I’m currently working on a Linux port.",evidence,pre-labelled by Claude
+"There's no reason an independent entity couldn't spin up a new trust anchor, as long as they get RPs to follow it.  If a government started meddling with an RIR's RPKI database, that would provide a pretty good set of incentives for an AltDB-but-for-RPKI TA to gain adoption.  Even in the absence of meddling, this would be useful for legacy IPv4 holders, who currently don't have a way to participate in RPKI.",opinion,pre-labelled by Claude
+"Whenever redis, mysql or postgres rear their head it raises all sorts of ugly questions like do you let apps share databases, how do you do backups, etc.
+
+For apps that will have 1-3 users and a few hits a day a sqlite file is far less operational overhead and can be backed up with all of the other files that app has.",opinion,pre-labelled by Claude
+"Its a bit interesting how the very fact that some technology has different grades of performance can escape people.
+
+Its something I've noticed in many folks. You'd say something like ""well sure, did you try using a different model"" and you will be met with screeching. Its almost as if they've shut off facts and made up their minds.
+
+An example: a year back I wanted to show that AI doesn't hallucinate that much.
+
+Here's like a 20 comment long conversation with a person who believed that ChatGPT hallucinates easily. It took them a long time to prove it - they used toy examples and it did't work because they'd never used the thinking version. Then they had to resort to esoteric examples in the benchmark which still didn't work.
+
+https://news.ycombinator.com/item?id=47693707",opinion,pre-labelled by Claude
+"I have found that generating Kubernetes configurations using Jsonnet is quite pleasant.  You don't have to use YAML.  Jsonnet as far as I know, is the configuration language closest in semantics to Borg Config Language, which is what Google uses.  I don't believe Googlers really thought people would use YAML directly.  I think they assumed folks would use something nicer to generate YAML, which is the ""assembly code"" of Kubernetes configuration.",opinion,pre-labelled by Claude
+"I find it funny how many of the comments are open weights != open source.
+
+As compared to what? Fully closed U.S. models?",reaction,pre-labelled by Claude
+This was released July 24th 2026 and agencies would have started pulling DS and products created by DS at that time. (It's in the appendix),evidence,pre-labelled by Claude
+"Wow, that sounds interesting. This whole business of saving tokens is really important for those of us who use AI programmes a lot.",reaction,pre-labelled by Claude
+"> If LLMs really were to ""think"" in the broader sense, and not pattern match on a huge database
+
+I'm antagonistic to the deployment and use of LLMs for a variety of reasons. Nevertheless ""pattern match on a huge database"" is a poor way to think about how these systems operate. They are networks of semantic and syntactic relationships; when you inject words, the network activates in ways that are hard to predict if you think of it mere ""pattern matching"" (although some of the activation will be that). If you then feedback the activation into the network (various ways to do this), the result is even less like ""pattern matching"" a just a little bit more like ""thinking"" ...",opinion,pre-labelled by Claude
+"I have no idea why this is being downvoted when the entire agenda of the current administration is to ""starve the beast"" by cutting all essential government departments and prove that public administration doesn't work so that everything can be privatized. And meanwhile the head of the current administration basically does what Russia (and Romania in the 90s did), he makes money by selling off those bits and pieces to the highest (personal) bidder.",opinion,pre-labelled by Claude
+"No, the question asked was whether binaries output by scriptc, such as the tsc-ts compiler binary, include a garbage collector that runs while they're running. (The question was not about the output of tsc-ts.) If not, then that would raise a bunch of questions about how the TypeScript code that was fed into scriptc is being executed without a GC. It is true that a TypeScript compiler could be written in a non-GC language like Rust, but tsc-ts in particular is written in TypeScript, which needs a GC.
+
+The answer, according to https://scriptc.dev/docs/limitations#weak-collections-and-me..., is that scriptc relies primarily on reference counting, augmented with a cycle collector that runs at specific times, kind of like Python.",opinion,pre-labelled by Claude
+Yes codemode is just replacing bash with sandboxed JavaScript.,opinion,pre-labelled by Claude
+"unfortunately keyboard and mouse tracking, screen tracking, ""what apps are open"" etc. are very common for remote work so I can totally see this being looked at in a similar way",opinion,pre-labelled by Claude
+"We take a few samples across 11 programming languages including Python, Rust, C++, Javascript, and we saw a few reasoning text issues that didn't seem to have a statistically significant language-specific pattern.",evidence,pre-labelled by Claude
+"I'm a perfect example. I'm nearing the first functional release of my entirely handwritten Linux-native mod manager, and I'm not sure if I want to open source it or not. I love the concept of FOSS software, and it's nearly the only kind I use when possible, and I would love to give back to other humans. However, I'm not interesting in doing free work for megacorps that simply want to see me out of a job for their benefit, and open source is currently looking more and more like that.
+
+Humans are so lazy and obsessed with cost-cutting, efficiency, and ""line go up"" that we'll willingly walk ourselves into such a bleak inhuman future.",reaction,pre-labelled by Claude
+"What programming languages? HTML/Javascript or C++/Rust, it makes a difference you know.",reaction,pre-labelled by Claude
+"Yeah, you can take advantage of the increased data rate of video, but you'd have to be careful about the distortion that comes with VHS, so you couldn't just convert each three bytes to a pixel of colour and run them all together in a video. QR codes was just an example familiar to the layperson, you could probably use much more data dense systems given you know know exactly where the data is going to be, but it would be very headache-inducing to watch, unless you made 1-frame datablasts or similar",opinion,pre-labelled by Claude
+"> Its still preferable to use Signal since now it actually supports numberless registration.
+
+It's preferable to use Signal because they don't collect as much metadata as WhatsApp, and the client is open source.
+
+I don't care so much about the numberless registration. Actually I don't even understand why people care so much about it.",opinion,pre-labelled by Claude
+"I wonder if it's downloaded after installation, like nonfree codecs in many Linux distros",reaction,pre-labelled by Claude
+"> No one makes Apple release new products.
+
+Their shareholders sure do.",opinion,pre-labelled by Claude
+"And what makes you trust them, with the “gun”?",reaction,pre-labelled by Claude
+"GrapheneOS has 500000+ users, and that is with only pixels. Maby more are waiting for the compatible Motorola hardware.
+
+GrapheneOS is not going to compromise on privacy or security, and so far, pixel devices are the only devices meeting the hardware security requirements. People have not had an issue taking that seriously.",evidence,pre-labelled by Claude
+"> Then I saw Ziex and I was amazed. It never occurred to me that the JSX approach could be done outside of JavaScript.
+
+It never occurred to me, either! This is really neat! How does it work?
+
+EDIT: Never mind, seems like it's a custom file format that gets compiled to Zig code. Still quite neat but unfortunately you lose all the IDE support.",reaction,pre-labelled by Claude
+"I'm curious if you could comment on why your DeepSWE performance is below Haiku. This is not a dig - getting 46% vs. Haiku's 52% is still amazing. I'm just wondering if perhaps your post-training was less aggressively RL'ed on coding tasks than perhaps Haiku was. Having a cheap 1,000 tok/s option for coding work is a dream because - if it's reliable enough - you could blast through work such as high-level security reviews or finicky and repetitive refactorings that don't necessarily require SOTA performance.",evidence,pre-labelled by Claude
+"> and half the world that does pin is probably pinned to Let's Encrypt
+
+To be fair, unless I'm misunderstanding, wouldn't this be a good move?
+
+LE has a good security record and takes itself seriously, versus these smaller CAs that seem to mess up regularly.",reaction,pre-labelled by Claude
+"This is very cool! Would love to read a technical article about some interesting parts of the project! Is it open source?
+
+I would had a ""longest series from one drop"" leaderboard",reaction,pre-labelled by Claude
+">How does it sound now?
+
+It sounds logical and sound? As a US citizen, I (a) agree that we shouldn't be allowing government employees to use AI services from adversary foreign governments and (b) that other countries shouldn't be allowing their government employees to use AI services from adversary foreign governments (which the US should be considered for plenty of countries).
+
+>Both nations may as well just say it - ""we're banning it because they're our closest competitor"".
+
+I guess we're just ignoring the national security implications lol",opinion,pre-labelled by Claude
+"I for one would be demotivated. Why maintain an official compiler that's not even half as fast as the vibe-coded one?
+
+""Just"" publish the language specs and be done.",opinion,pre-labelled by Claude
+"Tests.
+
+Input->black box->Output. It's kinda like how fuzzing is so effective.
+
+I think for important stuff code should be reviewed. But we've reached the point where something like frontend can just slap tests and perf/draw requirements on and as long as it meets those who cares what's in between input and output.",opinion,pre-labelled by Claude
+"I'm a big fan of the idea of gathering a few million dollars in donations for GPU hardware and building a job queue software factory for Apache Foundation and other non profit software custodians. Maximize hardware utilization, work your way through the value stack of replacing software with open replacements. This is a distributed computing problem fundamentally: jobs, queues, workers, staging and moving underlying data around (imho). In goes requirements, specs, context, etc, and out comes MIT licensed code for all to build on and extend. Similar for a reverse engineering factory.
+
+""Put the software factory and reverse engineering machine in the rack bro.""
+
+DeepSeek just open-sourced its inference engine - https://news.ycombinator.com/item?id=50163277 - October 2026",opinion,pre-labelled by Claude
+"> C is wonderfully simple at times.
+
+Yesterday, I watch a quick video[0] where Matthew Butterick was comparing book sizes and their appeal. “The C Programming Language” was my second programming book (after one about JavaScript 1.x) and I still remember it fondly. Easy to start with (with CodeBlocks on Windows and gcc on Linux) and the concepts were nicely explained. The book were also very nice.
+
+[0] https://www.youtube.com/watch?v=W-ryv6TwQvM",reaction,pre-labelled by Claude
+"If you’re exposing anything on Synology to the Internet, you’re already playing with fire. Their packages (like Container Manager) are usually very far behind on security patches.
+
+I think the current version of Docker engine Synology uses was end-of-life 2.5 years ago.",evidence,pre-labelled by Claude; hard case: security claim with EOL date - opinion vs evidence
+"> As always, MOST people don’t hate AI, they hate slop.
+
+That isn't true. AI is overwhelmingly used to create slop, not useful or interesting things. Therefore people hate AI in large part because it is synonymous with slop.",opinion,pre-labelled by Claude
+"I'm having trouble differentiating the different ""attacks"" here. Based on your thread it sounds like you're getting a DDoS attack against your nodes. The article appears to show some level of sophisticated OS backdooring (possibly from the ISP being compromised). Are you also seeing attempts to backdoor your nodes?",reaction,pre-labelled by Claude
+"This reminds me the ""Design by Contract"" concept from Eiffel programming language:
+
+https://en.wikipedia.org/wiki/Design_by_contract
+
+https://www.eiffel.com/values/design-by-contract/introductio...",evidence,pre-labelled by Claude; hard case: link-only comparison - reaction vs evidence
+"Claude Code still doesn't have a working scroll back buffer in their new renderer, it regularly flips its shit and mixes different pieces of history.
+
+Claude Code still can't get reasonable performance without writing a ""game renderer"" (that doesn't work)
+
+Claude Code is still written in JavaScript, eating hundreds of megabytes to make a shitty TUI whose literal sole role is to send API calls.
+
+Claude Code is software made by amateurs.",evidence,pre-labelled by Claude
+"Some websites still using the revoked roots: https://privatebin.net/?cbaaf3a2eae7a2ff#JE3iPaf8Mek91YbFymM...
+
+Particularly concerning is India's UIDAI https://lea.uidai.gov.in/",evidence,pre-labelled by Claude
+They have a personal definition of remote work that they believe is unassailable correct.,opinion,pre-labelled by Claude
+"I believe what you are talking about there is forensic genealogy.  That doesn't track down people who are in the database, but finds people who are distantly related and then, through genealogical information, figures out who the suspect could be.
+
+In other words, the people who put their DNA up help track down dangerous criminals.  This doesn't sound like something people would object to.  I certainly wouldn't.
+
+And this is not the discrimination we were talking about, unless we have now defined the tracking down of murderers and rapists as ""discrimination"".",opinion,pre-labelled by Claude
+Imagine your job is just replacing millions of Dollars worth of hardware every day. I mean there must be a reason the hold 8 GPUs per rack spare.,opinion,pre-labelled by Claude
+"> The AMD hardware is x86_64, which means lower battery life on average for normal users [...]
+
+A Ryzen AI Max+ 395 powered tablet with 70Wh [0] gets the same battery life given the same task as a Nvidia N1X powered laptop with 99.9 Wh [1].
+
+Power Consumption in their ""Cyberpunk / Stress Test"" is also lower at Ø109.3 (108.8-110.8) Watt for the x86_64 vs Ø134.5 (132.1-137.5) Watt for the arm64 system using the same settings, resolution and display brightness. They also get the same performance when normalising for resolutions and settings in Cyberpunk, so this is not an instance of one providing significantly more performance.
+
+[0] https://www.notebookcheck.net/Asus-ROG-Flow-Z13-GZ302EA-Conv...
+
+[1] https://www.notebookcheck.net/Asus-ProArt-P16-RTX-Spark-Lapt...",evidence,pre-labelled by Claude
+"If you, or anyone else reading, is interested in playing around with this stuff, there's an open source program called Praat[0]. I assume it still is the go-to in linguistics for making spectrograms, it was back when I was studying it, at least.
+
+There's probably nicer programs that can do the same thing, aimed at people like musicians, but they won't have the phonetics-specific guides and help online.
+
+There's also a large archive of speech recordings from a wide range of languages hosted by UCLA[1], which you can download and play around with. There might be newer archives now, but I remember this one, because Peter Ladefoged wrote the proverbial book on introductory phonetics.
+
+Linguistics generally aligns quite pro-copyleft, so there will be a lot of freely available stuff online.
+
+[0]: https://praat.org/
+[1]: https://archive.phonetics.ucla.edu/",reaction,pre-labelled by Claude
+"They're commodity eggs in Costco packaging.  They're even somewhat trackable; the USDA has databases[1] for this stuff.
+
+So, for instance:  The package of 24 large grade AA Kirkland-branded eggs from Costco that is in my fridge right now is stamped P3447.  Plant 3447 is registered as being Daybreak Foods, 2127 110th Street, Otsego, Michigan (not Costco).
+
+Milk is the same way:  One can read the printing on the bottle and determine where it was processed.
+
+[1]: The interface is genuinely awful, but: https://publicdashboards.dl.usda.gov/t/MRP_PUB/views/AMSLPQA...",evidence,pre-labelled by Claude
+"For what it's worth, it does perform on par with DeepSeek V4 Pro on my adversarial programming language benchmark[1]. I wouldn't think they would benchmax on that.
+
+1 - https://bench.killswitch-lang.org/",evidence,pre-labelled by Claude
+"""Apps that browse the web must use the appropriate WebKit framework and WebKit JavaScript.""
+https://open-web-advocacy.org/blog/tim-berners-lee-on-apples...",evidence,pre-labelled by Claude
+"To allow remote work. Instead of sending an engineer, issues can be fixed by an engineer or technician on HQ, or an outsourced indian/philipino",opinion,pre-labelled by Claude
+Thanks for the correction. I thought it was just minified javascript.,reaction,pre-labelled by Claude
+"And any computer program can be written in assembly, so why have other programming languages?",reaction,pre-labelled by Claude
+"Why are SLAs the bar for performance? Every additional second of execution time accumulates in the annual cloud bill, and using too much memory means I need a bigger box.
+
+For example, the C++ replacement for a Java program bottlenecking my CI takes 1/3rd as long (with less variance) and runs on a smaller instance.",evidence,pre-labelled by Claude
+"Agreed, though this appears to be much more than open weights.",reaction,pre-labelled by Claude
+...what steam devices? Steam Deck and Machine? I work in video games(at one of the largest publishers - worked at other two in the last few years) - and while we usually do some testing on the steam deck it's literally just to see if the windows version runs well. Full on Linux porting effort like Larian did for BG3 is very very rare and extremely hard to justify.,evidence,pre-labelled by Claude
+"Yes, but 7-8 companies have shown they can build that goose. LLMs are going to end up like databases or operating systems.  It's very hard to compete with free.
+
+The value is the user data that collects overtime and using that to become sticky for customers",opinion,pre-labelled by Claude
+XQuartz performance has been broken for a couple of years now and I believe it is primarily due to an OpenGL issue.,opinion,pre-labelled by Claude
+"Very fast. And yes, it can be used for small apps too. With java problem now is not the performance but how verbose still it is. However, it's much better since Java 17 and each release make it even more compact and direct. Like in this release we got much better built-in support for JSON.",opinion,pre-labelled by Claude
+"DeepSeek can accomplish over 90% of tasks of equivalent value at one-tenth of the fully loaded cost of O/A, and this capability can further spread through open source. In my view, the IPO risk for O/A is no longer just a valuation discount, but a substantive challenge to its long-term business model as a high-margin foundation model provider.
+
+In that scenario, even if global Token usage increases 100-fold in the future, that alone would not be enough to justify these foundation model companies being worth one or two trillion dollars.",evidence,pre-labelled by Claude; hard case: unsourced ratio claim - opinion vs evidence
+I’m working on many open-source SaaS and am working on making them malleable from the built in AI. Anyone else working on this?,reaction,pre-labelled by Claude
+"An underrated quality of parser combinators is that they're often written in continuation passing style (monadic style is a simple generalisation of this). So, you get ""incremental"" parsing for free (as ""what to do next"" is trivially available). So, many of these parsers work well on streams (e.g. TCP sockets) without manually maintaining a state machine - as you may do in C. Further to this, such a state machine is derivable by defunctionalising the parser combinator code. Of course, you get the same benefit if you have decent coroutine support, but it's nice to see techniques that work around not having runtime/language support for such niceties.
+
+There's another, more obscure, technique in the functional programming world called [iteratees](https://okmij.org/ftp/Haskell/Iteratee/index.html) which are quite neat and (as done in related article) linked to ""online parser combinators"".",opinion,pre-labelled by Claude
+"Yup, but you need to be aware that all information are passed to the security services of the Communistic Party of China and could be used against you. E.g. to blackmail you, if you are, say, soldier, public officer, higher up in some company, etc. Or to steal your data & money.
+
+Despite China having really great PR this is still a country which has exactly zero free speech, controls 100% of media and internet, keeps people in concentration camps.
+
+So this particular move does not surprise me, in fact, I am surprised that European governments does not get how much sensitive information is leaked through AI and they give all of that freely to third parties from China and also from USA...",opinion,pre-labelled by Claude
+Your impression is correct. Clinical trials are the rate limiting step and the primary source of cost and risk.,opinion,pre-labelled by Claude
+"> I'm not sure it's so easy. I think you have to compromise on hardware or software and Apple makes a choice.
+
+No one forces Apple to stick to yearly releases. No one forces Apple to cut down on QA. No one forces Apple to prioritize shiny new poorly designed and half-baked features over system stability.",opinion,pre-labelled by Claude
+"Which went through a bloody religious partition in 1947 to become two separate countries because of incompatible competing cultures not able to live together. And one country promptly wiped out the other culture almost completely to become a mono-culture. And that enmity between the two countries (cultures) follow to even now with wars and other hostilities.
+
+What is called multiculturalism in India is a mix of indigenous sub-cultures who share many similarities, which the different cultures of EU/Europe can be considered to be following as well.",opinion,pre-labelled by Claude
+"Yes, they are always changing, I know Linux since 1996, use it as part of my work, last time I used a system like Ubuntu was last year, where it failed to work with a GIGABYTE BRIX Mini-PC UEFI firmware when starting from internal SSD, which I eventually gave up after several weeks trying various workarounds.",evidence,pre-labelled by Claude
+Sponsor Ads can be blocked on the Apple TV YouTube app using iSponsorBlockTV on a home server: https://github.com/dmunozv04/iSponsorBlockTV,evidence,pre-labelled by Claude
+"A byproduct of working remote is the amount of human connection in general has gone way down. The only time I ""see"" the people I work with anymore is when we're on a meeting.
+
+Meetings that could have been an email, in some ways, are replacing hallway and water cooler conversations. Are they a good replacement for that? Not really.",opinion,pre-labelled by Claude
+"Sharia law is a boogeyman on the same level as the satanic panic and the witch trials. It's about someone who wants power over you making one of your neighbors the ""other"", which only he can save you from.
+
+We saw the same kind of bullshit against the ""papists"" with Irish immigration, and the Chinese who came to work on building the railroads.
+
+Immigrant children who grow up in the US, are just like any other children growing up in the US. They don't just follow whatever their parents believed in.",opinion,pre-labelled by Claude
+"Apparently, I have to enable JavaScript to receive a rating.",reaction,pre-labelled by Claude
+"As long as the robots are paying into social security, I'm good. ;)",reaction,pre-labelled by Claude
+"> One of the private keys is literally ""4"".
+
+Oh no, they reverse engineered the random number generator!
+
+[0]: https://xkcd.com/221/",reaction,pre-labelled by Claude
+"Yes. The obviously-AI ones are of course the most offensive, but in general I would always prefer to use the UI without any AI involvement.",opinion,pre-labelled by Claude
+I do think politicians should waive some privacy rights when elected. Same thing for their bank accounts and other assets.,opinion,pre-labelled by Claude
+"According to the Ancient Greeks, the single word to aim at with education is not ""resourceful,"" it is ""virtuous."" Hard to get Lindy-er than that.",opinion,pre-labelled by Claude
+"absolutely wild that HN juuust clips the visibility of the referral code appended to all of your links
+
+well played honestly",reaction,pre-labelled by Claude
+It's only another 30 years before we have the first one hundred years old extant programming language.,opinion,pre-labelled by Claude
+"from nodejs's diff:
+
+> These are the eMudhra/emSign intermediates whose private keys were reported compromised in October 2026.",evidence,pre-labelled by Claude
+Leave it to the internet to come up with a new application for a recreational drug.,reaction,pre-labelled by Claude
