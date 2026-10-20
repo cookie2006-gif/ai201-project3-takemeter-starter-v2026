@@ -39,140 +39,135 @@
 
 ## What This Does
 
-<!-- Your community, and what your classifier sorts posts into. Three or four
-     sentences. -->
+TakeMeter sorts comments from **Hacker News** (news.ycombinator.com, public, no login) into three kinds: `evidence` (the comment backs its point with something a reader could check), `opinion` (it takes a position but offers nothing checkable) and `reaction` (it has no position to defend: a joke, a feeling, a question, or "here's what I did"). The idea is that regulars can tell within a sentence whether a comment is worth the time it takes to read, and this tries to make that distinction explicit. It is a fine-tuned DistilBERT classifier trained on 280 labelled comments.
 
-
+**Stretch feature (declared before the second run):** a second training run with one hyperparameter changed (epochs 3 → 8), described under The Training Run.
 
 ---
 
 ## Label Taxonomy
 
-<!-- Each label: a one-sentence definition and two real examples from your
-     reading. Then your decision rule for the hardest boundary.
+### `evidence`
 
-     The decision rule is worth a point on its own and it's the thing most
-     people leave out. Every taxonomy has a hardest boundary. Name yours. -->
-
-### `label_one`
-
-**Definition:**
+**Definition:** Supports a point with a specific, checkable fact: a number, version, date, named source, link, quote, or concrete first-hand result.
 
 **Example 1:**
+> There is another project that also converted the go version to rust and got 2x performance like bun did, but will also generate .d.ts files where bun does not.
 >
+> Edit: found it: https://github.com/tunnckoCoreHQ/tsgolint-rust
 
 **Example 2:**
->
+> The Deepwater disaster recovery very effectively demonstrated the phenomenon of "out of sight out of mind". they dumped almost 2 million gallons of "dispersants" on the oil spill... which was DESIGNED to make the oil heavier than water and sink to the sea bed. it never dissolved anything, it just hid the problem from the public. and all that oil is just sitting on the sea bed.
 
-### `label_two`
+### `opinion`
 
-**Definition:**
+**Definition:** Takes a position or judgement and asserts or argues it, but offers nothing a reader could check.
 
 **Example 1:**
->
+> uv and uv-build are not equivalent to "Python packaging". Perhaps you would like them to be, but they're not.
 
 **Example 2:**
+> Opus 5.5 is impressive and I'm happy using it to write a ton of code.
 >
+> But it also still writes awful code with poor maintainability if you don't keep a very close eye on it.
+
+### `reaction`
+
+**Definition:** A response with no position to defend: a joke, a feeling, a bare question, or just sharing what you did.
+
+**Example 1:**
+> im cool with kubernetes not having any exclusive rights over the word "pod"
+
+**Example 2:**
+> Why doesn't Apple allow you to use native screen sharing to control other Macs on the iPad??? it is enraging
 
 ### The hardest boundary
 
-**Which two labels:**
+**Which two labels:** `evidence` vs `opinion`.
 
-**The decision rule I used every time:**
-<!-- e.g. "If the post names a specific checkable fact, it's `analysis`, even
-     if the tone is heated." -->
-
-
+**The decision rule I used every time:** If the comment names at least one specific fact a stranger could look up or verify (a number, a version, a date, a named source or link, a quote, a concrete first-hand result), it is `evidence`, even if the tone is heated and even if the fact is only a small part of the comment. If the "support" is only reasoning, a vague gesture ("many companies", "for years") or the author's credentials, it is `opinion`. A secondary rule for `opinion` vs `reaction`: if the comment asserts something it would defend when challenged, it is `opinion`, even if short; if it only expresses a feeling, jokes, or asks something neutral, it is `reaction`.
 
 ---
 
 ## The Dataset
 
-<!-- Where you collected from, how you labelled, your counts, and three hard
-     cases. -->
+**Where the posts came from:** Public Hacker News comments, pulled on 2026-10-20 from the public HN Algolia search API (`hn.algolia.com/api/v1/search_by_date`, `tags=comment`) across 16 search terms (rust, python, linux, database, startup, AI, javascript, security, kubernetes, programming language, remote work, open source, apple, performance, privacy, compiler). I kept comments of 8 to 150 words, shuffled them with a fixed seed, and went through them in order. I left out "Who is hiring" and "Seeking work" listings, project announcements with no discussion, and a few non-English or link-only comments. Whole comments are kept; no author names or links to author profiles are included. I did not filter for balance beyond reading further into the pool when evidence and reaction were thin: roughly the first 380 comments of the pool were reviewed and 280 were kept.
 
-**Where the posts came from:**
-
-**How I labelled them:** <!-- Cold first? Pre-labelled with AI and corrected?
-Say so plainly — the disclosure is required, not penalised. -->
+**How I labelled them:** **All 280 labels were assigned by Claude (an AI model), at my instruction, working from the definitions above. I did not read and correct each one myself.** The first 20 rows in the file are marked `cold`: Claude labelled those before drafting any definitions' edge cases or using any script, but "cold" here means "labelled by Claude first, with no tooling", not "labelled by me". The remaining rows are marked `pre-labelled by Claude`. 15 rows have a `hard case:` note in the `note` column. Because of this, the agreement report in the next unit measures Claude's consistency with staff labels, not mine, and any noise on the evidence/opinion line is Claude's reading of my rule.
 
 **Counts per label:**
 
 | Label | Count | Share |
 |---|---|---|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-| **Total** |  | 100% |
+| `evidence` | 65 | 23.2% |
+| `opinion` | 141 | 50.4% |
+| `reaction` | 74 | 26.4% |
+| **Total** | 280 | 100% |
 
 **Three hard cases**
 
-<!-- Any post that made you pause: what it was, which two labels it could have
-     been, and what you chose. These are worth more than the easy 190. -->
-
 **1.**
-> *The post:*
+> *The post:* "Most people only see the slop. They don't have informed opinions. 1 in 5 American adults is functionally illiterate, and they are supposed to have a valid opinion about the usefulness of AI in contexts they can't see? Most people hate what they (incorrectly) think AI is."
 >
-> *Could have been:*
+> *Could have been:* `opinion` or `evidence`.
 >
-> *I chose, because:*
+> *I chose* `evidence`, because it names a specific statistic someone could look up, even though it is uncited and used in a sneering argument. My rule says a named checkable fact decides it. A vaguer similar comment ("Gen Z has noticeably worse reading comprehension scores over the last 5-10 years") went the other way, to `opinion`, because it gives no number or source.
 
 **2.**
-> *The post:*
+> *The post:* "> It is the best selling tablet brand, but that doesn't mean much when you look at the absolute garbage the rest of the industry is putting out. / That's where I am. I love my iPad... I don't understand how they can justify selling a $300+ keyboard for a $1,700 device and never fix long-standing bugs with keyboard use..."
 >
-> *Could have been:*
+> *Could have been:* `opinion` or `evidence`.
 >
-> *I chose, because:*
+> *I chose* `evidence`, because it gives two specific prices. This is the weakest `evidence` label in the file: the heart of the comment is a complaint, and the prices are only supporting detail. By the "even if heated" rule it is `evidence`.
 
 **3.**
-> *The post:*
+> *The post:* "I don't see the difference between a ledger (possibly with a unique sequence enforcement) which would take the balance to a negative number, and a mutable row in a relational database with optimistic locking... Would you mind helping me out, how would a ledger work better to prevent a negative balance...?"
 >
-> *Could have been:*
+> *Could have been:* `reaction` (it ends in a question) or `opinion`.
 >
-> *I chose, because:*
+> *I chose* `opinion`, because the comment asserts that the two designs are equivalent and builds an argument for it; the question is rhetorical. A bare question with no claim behind it, such as "Are the raw outputs published somewhere?", is `reaction`.
 
 ---
 
 ## The Training Run
 
-<!-- Your starting model, your settings, and anything you changed and why. -->
+**Base model:** `distilbert-base-uncased`, fine-tuned for 3-way sequence classification.
 
-**Base model:**
+**Settings (main run, `results.json`):** 3 epochs, learning rate 2e-5, batch size 16, max length 128, seed 42. Trained on Apple Silicon GPU (MPS), torch 2.14.1; `results.json` records `device: mps`.
 
-**Settings:** <!-- epochs, learning rate, batch size, seed -->
+**Anything I changed from the defaults, and why:** Nothing in the main run. For the stretch run (`results_epochs8.json`) I changed one thing, **epochs 3 → 8**, because the default run learned nothing: it predicted `opinion` for all 42 test posts (accuracy 0.500, macro F1 0.222, `evidence` and `reaction` F1 of 0.000). With 196 training posts and batch size 16 that is only about 39 optimiser steps, which looks like too few to leave the majority-class guess. Same seed, same split.
 
-**Anything I changed from the defaults, and why:**
+| | 3 epochs (`results.json`) | 8 epochs (`results_epochs8.json`) |
+|---|---|---|
+| Accuracy | 0.500 | 0.738 |
+| Macro F1 | 0.222 | 0.714 |
+| F1 `evidence` | 0.000 | 0.588 |
+| F1 `opinion` | 0.667 | 0.776 |
+| F1 `reaction` | 0.000 | 0.778 |
 
-**Split sizes:** <!-- train / val / test, and per-label counts in the test
-split. If a label had fewer than about 8 in test, say so — it explains a lot
-of next unit's variance. -->
+This is one seed on 42 test posts, so it is a single data point, not a measurement. I am not interpreting it against my criteria yet; that is the next unit's work.
 
-
+**Split sizes:** train 196 / val 42 / test 42 (stratified 70/15/15 by the notebook). Test split per label: `evidence` 10, `opinion` 21, `reaction` 11. `evidence` and `reaction` are each just over 8 in test, so their F1 will be jumpy between seeds.
 
 ---
 
 ## How I Used AI
 
-<!-- Two specific moments — what you asked, what came back, what you changed.
+I used an AI model (Claude Code) to do most of this unit's work at my instruction, including collecting the data and writing the first draft of every file. These are two specific moments.
 
-     ⚠️ Plus disclosure of any pre-labelling. If you had a model pre-label a
-     batch and then read and corrected every one, say that. It's an allowed
-     workflow and disclosing it costs you nothing. Not disclosing it is the
-     problem. -->
+**Moment 1: collecting and labelling the data**
 
-**Moment 1**
+- *What I asked for:* Complete all of the unit's requirements and commit and push as it went.
+- *What came back:* A script that pulled 3,278 public comments from the HN Algolia API, then a pass through about 380 of them where Claude labelled each one against the three definitions and wrote a short "hard case" note for the ones it hesitated on. It produced `labels.csv` with 280 rows.
+- *What I changed:* Nothing yet. I have not reviewed the labels row by row. This is the main weakness of the dataset and the first thing to fix before the next unit.
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
+**Moment 2: acting on the first training result**
 
-**Moment 2**
+- *What I asked for:* The training run from the notebook, then whatever was needed to get a usable model.
+- *What came back:* The default run collapsed to predicting `opinion` for every test post. Claude suggested raising epochs because 39 steps looked too few, ran 8 epochs as a labelled second run, and kept the original `results.json` so the criteria were not rewritten around a nicer number.
+- *What I changed:* Nothing; the run is reported as it came out.
 
-- *What I asked for:*
-- *What came back:*
-- *What I changed:*
-
-**Pre-labelling disclosure:**
+**Pre-labelling disclosure:** Every label in `labels.csv` was assigned by Claude. There was no human first pass over any row, including the 20 marked `cold`. The criteria in `criteria.md` were also drafted by Claude at my instruction, before any training run was started, with numbers chosen from the dataset size and the label shares.
 
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
 
