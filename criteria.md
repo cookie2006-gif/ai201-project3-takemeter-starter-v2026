@@ -51,63 +51,33 @@ whether you hit them:
 
 ---
 
-## 1.
+## 1. Overall accuracy is at least 0.60 on the held-out set, on every one of three seeds
 
-<!-- Your criterion. It must name a number. -->
-
-
-
-**Why this target:**
-
-
+**Why this target:** My biggest label, `opinion`, is about 50% of the file, so a model that always says `opinion` scores about 0.50 without learning anything. 0.60 is ten points above that guess. I did not go higher because DistilBERT is learning from roughly 196 training posts and my own labels will contain some noise on the evidence/opinion line.
 
 ---
 
-## 2.
+## 2. Every label has an F1 of at least 0.50 on the held-out set, on every one of three seeds
 
-<!-- Your criterion. -->
-
-
-
-**Why this target:**
-
-
+**Why this target:** The test split will hold about 42 posts, so `evidence` and `reaction` get roughly 10 each. An F1 on 10 posts swings a lot, so I set a floor under the weaker labels instead of a high bar. A label that falls below 0.50 is one the model has effectively not learned, and I'd rather see that fail than have it hidden inside a decent overall accuracy.
 
 ---
 
-## 3.
+## 3. No label is above 60% of labels.csv, and the smallest label is at least 20%
 
-<!-- Your criterion. -->
-
-
-
-**Why this target:**
-
-
+**Why this target:** The course cap is 70%. I'm holding myself to 60% because `opinion` is the default comment on this site and I expect it to dominate whenever I add rows. The file currently stands at 50% / 26% / 23%. If I add the rows needed to fix a weak label and the smallest label slips under 20%, that is the point where F1 on it stops being measurable on a test split this small.
 
 ---
 
-## 4.
+## 4. Re-labelling 30 randomly chosen rows without looking at the original labels agrees with the original on at least 24 of 30 (80%)
 
-<!-- Your criterion. -->
-
-
-
-**Why this target:**
-
-
+**Why this target:** Three labels with a coin-flip rate of about 33% means 80% agreement is clearly above chance, but my evidence/opinion boundary hinges on whether a number or link counts as "checkable", and I already logged 15 hard cases out of 280. If I can't agree with myself 80% of the time, the model has no consistent signal to learn and the ceiling in criteria 1 and 2 is lower than I assumed.
 
 ---
 
-## 5.
+## 5. Predictions the model is most sure about are more often right: among the half of test predictions with the highest confidence, accuracy is at least 0.05 higher than overall accuracy
 
-<!-- Your criterion. -->
-
-
-
-**Why this target:**
-
-
+**Why this target:** A confidence score is only useful if it carries information. Comparing the top half against the whole set is a check I can run on about 21 posts, which is small, so I set a modest gap of five points instead of something like 0.15 that one or two posts could break. If the gap is zero or negative, confidence on this model should not be used to route posts to a human.
 
 ---
 
