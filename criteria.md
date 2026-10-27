@@ -79,6 +79,10 @@ whether you hit them:
 
 **Why this target:** A confidence score is only useful if it carries information. Comparing the top half against the whole set is a check I can run on about 21 posts, which is small, so I set a modest gap of five points instead of something like 0.15 that one or two posts could break. If the gap is zero or negative, confidence on this model should not be used to route posts to a human.
 
+
+> **Revised in unit 6:** Among the most-confident third of test predictions (14 of 42 posts), accuracy is at least 0.05 higher than overall accuracy.
+>
+> **Why revised:** the notebook's `results.json` only records accuracy for the most-confident and least-confident thirds, so "the half with the highest confidence" could not be measured from what I had. The 0.05 gap is unchanged. Under this version the "before" run is MET on all seeds (+0.357, +0.214, +0.143) and the "after" run is MISSED on seed 7 (+0.048).
 ---
 
 <!-- ─────────────────────────────────────────────────────────────────────────

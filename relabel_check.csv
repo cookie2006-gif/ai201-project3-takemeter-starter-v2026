@@ -1,0 +1,123 @@
+row_index,text,original_label,relabel
+1,"I don't see the difference between a ledger (possibly with a unique sequence enforcement) which would take the balance to a negative number, and a mutable row in a relational database with optimistic locking (same unique sequence enforcing). Would you mind helping me out, how would a ledger work better to prevent a negative balance, given that the enforcement isn't specific to ledgers and can be used in relational DBs? After all, both can go to negative balance by applying atomic subtractions, and both can prevent writes with the wrong sequence.",opinion,opinion
+5,"uv and uv-build are not equivalent to ""Python packaging"". Perhaps you would like them to be, but they're not.",opinion,opinion
+39,"Yes, because an OS is much more than drivers, the culture among its users and developers is quite relevant, and OpenBSD users certainly don't want to deal with many Linuxisms like systemd for example, or rather favour pkg approach to software delivery, that is why they are on a BSD in first place.
+
+Just like others might favour Illumos, Aix, z/UNIX, macOS or whatever take on UNIX evolution.",opinion,opinion
+41,"> I suspect that many of the loudest voices pushing back against AI coding tools never practiced programming as a hobby or saw it as especially fun, and the fact their job is changing won't make them start now.
+
+As many people here and on Reddit can attest, I am one of these loud voices.
+
+I actually see programming as all three: a hobby, fun and a profession. And AI itself is... neither. It's not enjoyable because you have to understand everything anyway if you want to do a decent job, no matter if for hobby or for work. The only thing AI can do is save you time when you have no starting point at all - i.e. reconnaissance in pentesting.",opinion,opinion
+45,"How does this use case differ?
+
+People ssh over Tor for the same reason they use Tor for any network activity: To make confidential 1) your identity to the remote host and 2) your activities to your network providers (including your ISP/workplace/etc.).
+
+If you want only confidential content, ssh is sufficient and so is https for web browsing. If you want the other things, you must use Tor or maybe something similar.",opinion,opinion
+50,"AI will fail because the supply chains required for the hardware are not feasible if there's more than a few wars worldwide (including internet connectivity, so no ChatGPT). To say nothing of the fact that of course governments will decide that they have absolute priority. Right now China is calmly preparing to invade Taiwan and the second the first boat leaves the shore: no more Nvidia (or AMD, or Qualcomm, or ...) chips. Zero. For years. No matter how the conflict goes. And China keeps just calmly and very publicly repeating they're going to do so.
+
+(there, perhaps insane, but at least a more original take than ""AI is a bubble"", no?)",opinion,opinion
+52,"If you are approaching anything looking like an enterprise environment, you are likely to have Kubernetes nearby. ko is a weird requirement. ax requires agent substrate, so it makes sense that it's needed. Agent Substrate also has experimental support in kagent, so it makes sense that it is growing.
+
+I don't really like the oversubscription of agent pods though, as you can no longer trust the k8s pod identity as being from a singular workload. Haven't seen a solution to this for ax yet and it is a barrier to adoption for us.",opinion,opinion
+56,Agreed. I don't think people realize how much more people are using their free services. It's staggering.,opinion,opinion
+60,"Yea, I started out thinking ""well you just use the thing to find citations."" Then I realized all this article is just: ""I lied on the internet and people believed me, isn't that crazy!?!""
+
+This type of behavior is why gatekeeping institutions exist. We all pay a non-trivial cost because someone thinks that other people taking their lies seriously is somehow remarkable. It's not.
+
+Research is hard work. Publishing fake research is just intentionally throwing wrenching into the machine of academia. All you've done is reinforce the need for gatekeepers (which never went away), show that some no-name journal isn't rigorous (they often aren't), and you've wasted a bunch of people's time demonstrating why institutions exist, when we know why they exist.
+
+Genuinely terrible behavior.",opinion,opinion
+107,Given how much the models like React and JavaScript I guess we should be thankful its Python.,reaction,reaction
+114,"Please you port it if its so easy, the tests are available on gh. I wont be using an llm ported ts compiler anyways, and neither would many others
+
+Its a great way to divide and kill the popularity of your project. I made sure bun is no longer used in my devices or projects that depend on it for example, I'm not alone in this.",opinion,opinion
+122,"bookstack
+
+keycloak
+
+immich
+
+jellyfin
+
+several personal sites
+
+home assistant
+
+unsloth studio
+
+several synology tools on a nas (drive/security/backups)
+
+etc...
+
+If it's ""just you"" your laptop is likely fine.  Hosted tools really start to shine when you've got a group of folks using them.  Ex - Wife/Parents/Kids/Extended Family.
+
+Simple k3s cluster and the shallow end of kubernetes actually saves you a ton of time and effort (don't go into complex orchestrators or helm charts - just write small deployments in static yaml).  You can get to roughly the same spot with just docker/compose if you want, but the capabilities cap out earlier (ex - multi-machine, resilient to any one machine going down, gpu sharding, etc)
+
+Maintenance is basically ""sudo pacman -Syyu"" on a cron job.",opinion,evidence
+128,"There is a huge list of issues with /e/OS. Let me just give you a few examples:
+
+Android 17 introduced a local network permission. GrapheneOS ported to Android 17 months ago. LineageOS, which /e/OS is based on just recently started releasing Android 17 updates. /e/OS may not be on Android 17 yet, I haven't checked. So, imagine for months apps have had access to the local network. What can they do with that?
+
+That's just one example of how being far behind on updates can affect privacy.
+
+/e/OS is far less deGoogled than GrapheneOS.
+
+/e/OS lacks features like Storage Scopes, Contacts Scopes, Secure Paste, and sensors permission.",evidence,evidence
+147,"What’s funny is that it’s not the public or even the board that is demanding that Apple release whiz-bang moonshot software features every year. Users do want shiny new hardware, but besides necessary hardware drivers, 90% of users LOVE it when the core OS and the UI stays stable for years. So they can get used to it. Instead of reshuffling the UI of every app every 12 months like iOS has been doing for 10 years. And evolving the visuals in big and small ways constantly. Both of these are not fooling anyone into overestimating Apple’s innovativeness.",opinion,evidence
+149,There are already OSes that include LLM code (such as Linux). It's fine to have a few that don't.,opinion,opinion
+160,"I've transcribed calls with Microsoft Teams and 8x8 and the transcripts are absolutely awful. Sometimes so poor that one cannot reliably use them with LLMs. I feel so incredibly left out when I see these models on HN and have to go back to corporate reality and deal with Microsoft Teams and 8x8. I wish these products could produce plugins where i could direct Microsoft Teams and 8x8 streams to them to replace underperforming stock models.
+
+Also, I dont understand why Microsoft cannot just buy some of these upstarts and swap in their awesome models.",reaction,evidence
+163,"> Always have a manual way to control a device if HA goes down.
+
+It is for this reason that my lights (Hue) and switches (Inovelli) are bound in ZigBee groups. HA adds some niceties, but the lights still work if it’s down. Accent lights I have bound to the Hue Bridge, because their app adds features HA doesn’t have, and they aren’t required for emergency egress.
+
+The only gap I have, I think, is that because I’ve set all bulbs to respond to power restoration after a cut in last known state, if everything somehow lost its Zigbee binding, putting switches into dumb mode locally still wouldn’t help. However, since that’s an improbable scenario, I accept the remote possibility in exchange for not being awakened from lights coming on in the middle of the night. Plus I keep flashlights / headlamps throughout the house.",reaction,evidence
+174,"This seems to hold true for most people. One of my close friends (a successful founder) was an early adopter of the iPad Pro, and intended to make it his go-to device for traveling. He ended up buying the Magic Keyboard case, a USB-C dongle for HDMI out, and the Apple Pencil to comprise a proper Rube Goldberg travel experience.
+
+After months of suffering through that, he switched back to a Macbook Air and carries the iPad for watching Plex now. I am still baffled as to which ""pros"" the iPad Pro is targeting.",opinion,evidence
+178,"Afaik, didn't the Romanian election also feature Russian money literally buying votes?
+
+I.e. people asking at the polling places who was going to pay them the money they'd been promised
+
+[Edit: nope, that was neighboring Moldova in 2024]
+
+It does beg a question of how to run an election as a smaller state when faced with overwhelming propaganda from a much larger one (the US or Russia).
+
+That's never not been true, I suppose, but with large unregulated, privately-controlled social media platforms it feels more pressing.
+
+How does one run a ""fair"" election if the voters are being irradiated with one-sided messaging sufficient to turn an election? Is the result really the will of the people? And yet, what's the alternative?",opinion,opinion
+182,">It's much easier for people to silo themselves off and fix any problem that appears
+
+i fail to realize how is this a negative thing",reaction,opinion
+192,"Their act together was keeping improving pages router, with api routes for server side code.
+
+The closest any JavaScript framework had come to Java and .NET frameworks, battle tested in production for almost 30 years now.
+
+It has been downhill since app routing was introduced.",opinion,opinion
+203,"Who needs rust or javascript anymore when we can write all our code in C again and put an agentic zero-day hunter in the toolchain?
+
+""Make no mistakes.""
+
+Or a comfy scripting language with a great FFI as X intended.",reaction,reaction
+215,"No, the question asked was whether binaries output by scriptc, such as the tsc-ts compiler binary, include a garbage collector that runs while they're running. (The question was not about the output of tsc-ts.) If not, then that would raise a bunch of questions about how the TypeScript code that was fed into scriptc is being executed without a GC. It is true that a TypeScript compiler could be written in a non-GC language like Rust, but tsc-ts in particular is written in TypeScript, which needs a GC.
+
+The answer, according to https://scriptc.dev/docs/limitations#weak-collections-and-me..., is that scriptc relies primarily on reference counting, augmented with a cycle collector that runs at specific times, kind of like Python.",opinion,evidence
+225,"And what makes you trust them, with the “gun”?",reaction,reaction
+230,"This is very cool! Would love to read a technical article about some interesting parts of the project! Is it open source?
+
+I would had a ""longest series from one drop"" leaderboard",reaction,reaction
+234,"I'm a big fan of the idea of gathering a few million dollars in donations for GPU hardware and building a job queue software factory for Apache Foundation and other non profit software custodians. Maximize hardware utilization, work your way through the value stack of replacing software with open replacements. This is a distributed computing problem fundamentally: jobs, queues, workers, staging and moving underlying data around (imho). In goes requirements, specs, context, etc, and out comes MIT licensed code for all to build on and extend. Similar for a reverse engineering factory.
+
+""Put the software factory and reverse engineering machine in the rack bro.""
+
+DeepSeek just open-sourced its inference engine - https://news.ycombinator.com/item?id=50163277 - October 2026",opinion,opinion
+251,Thanks for the correction. I thought it was just minified javascript.,reaction,reaction
+257,XQuartz performance has been broken for a couple of years now and I believe it is primarily due to an OpenGL issue.,opinion,opinion
+262,"Yup, but you need to be aware that all information are passed to the security services of the Communistic Party of China and could be used against you. E.g. to blackmail you, if you are, say, soldier, public officer, higher up in some company, etc. Or to steal your data & money.
+
+Despite China having really great PR this is still a country which has exactly zero free speech, controls 100% of media and internet, keeps people in concentration camps.
+
+So this particular move does not surprise me, in fact, I am surprised that European governments does not get how much sensitive information is leaked through AI and they give all of that freely to third parties from China and also from USA...",opinion,opinion
+275,"According to the Ancient Greeks, the single word to aim at with education is not ""resourceful,"" it is ""virtuous."" Hard to get Lindy-er than that.",opinion,evidence

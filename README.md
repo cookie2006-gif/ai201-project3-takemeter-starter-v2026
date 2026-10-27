@@ -167,6 +167,8 @@ I used an AI model (Claude Code) to do most of this unit's work at my instructio
 - *What came back:* The default run collapsed to predicting `opinion` for every test post. Claude suggested raising epochs because 39 steps looked too few, ran 8 epochs as a labelled second run, and kept the original `results.json` so the criteria were not rewritten around a nicer number.
 - *What I changed:* Nothing; the run is reported as it came out.
 
+**Unit 6 additions.** At my instruction Claude ran `baseline.py` (twice: definitions and bare names), ran the notebook's section 6 headlessly three seeds at a time for `before` (3 epochs) and `after` (8 epochs), re-labelled 30 random rows from `labels.csv` blind for the criterion-4 check (`relabel_check.csv`), and labelled the 30 staff posts under the staff taxonomy. It also drafted the verdicts and diagnoses. The measurements come from the scripts; the verdicts and diagnoses are Claude's reading and I have not yet checked them against the staff key. The pattern Claude found in my errors was that `evidence` is under-called (5 of 10 go to `opinion`), and it linked that to the relabel disagreements (7 of 8 touch `evidence`). One mistake worth recording: Claude ran `baseline.py` before the prediction was written, with the output redirected to a file; the prediction was committed before that file was read.
+
 **Pre-labelling disclosure:** Every label in `labels.csv` was assigned by Claude. There was no human first pass over any row, including the 20 marked `cold`. The criteria in `criteria.md` were also drafted by Claude at my instruction, before any training run was started, with numbers chosen from the dataset size and the label shares.
 
 <!-- ═══════════════════════ UNIT 6 — THE TEST ═══════════════════════
@@ -178,179 +180,142 @@ I used an AI model (Claude Code) to do most of this unit's work at my instructio
 
 ## Baseline vs. Trained
 
-<!-- Both models on the same posts. `python baseline.py --trained results.json`
-     prints this table for you. -->
+Both scored on the same 42 posts in `test_split.csv` (seed-42 split). Baseline is `facebook/bart-large-mnli`, zero-shot, on my `label_definitions.txt`; it ran on `mps`. `baseline_results.json` is the definitions run; `baseline_bare_names.json` is the bare-label-names run.
 
-| Measure | Baseline | Trained | Difference |
-|---|---|---|---|
-| Overall accuracy |  |  |  |
-| Macro F1 |  |  |  |
-| F1 — `label_one` |  |  |  |
-| F1 — `label_two` |  |  |  |
+| Measure | Baseline (my definitions) | Baseline (bare names) | Trained, 3 epochs (`results.json`) | Trained, 8 epochs (`results_epochs8.json`) |
+|---|---|---|---|---|
+| Overall accuracy | 0.238 | 0.405 | 0.500 | 0.738 |
+| Macro F1 | 0.149 | 0.352 | 0.222 | 0.714 |
+| F1 — `evidence` | 0.360 | 0.154 | 0.000 | 0.588 |
+| F1 — `opinion` | 0.087 | 0.471 | 0.667 | 0.776 |
+| F1 — `reaction` | 0.000 | 0.432 | 0.000 | 0.778 |
 
 **What I predicted before I looked:**
 
-The trained model will beat the zero-shot baseline on `reaction` (short jokes, feelings and bare questions have surface cues that fine-tuning picks up quickly) and the baseline will be at least as good on `evidence` (it can read "a number, version, date or link" directly from my definitions, whereas the trained model has only about 45 evidence examples). Caveat, stated honestly: I had already seen last unit's `results.json` and `results_epochs8.json` (accuracy 0.500 and 0.738), but I had not opened the baseline's output when I wrote this. `baseline.py` had been run once with its output redirected to a file I had not read.
+The trained model will beat the zero-shot baseline on `reaction` (short jokes, feelings and bare questions have surface cues that fine-tuning picks up quickly) and the baseline will be at least as good on `evidence` (it can read "a number, version, date or link" directly from my definitions, whereas the trained model has only about 45 evidence examples). Caveat, stated honestly: I had already seen last unit's `results.json` and `results_epochs8.json` (accuracy 0.500 and 0.738), but I had not opened the baseline's output when I wrote this. `baseline.py` had been run once with its output redirected to a file I had not read. This prediction is committed before the baseline output was read.
 
 **What the gap actually means:**
-<!-- If the baseline matched your trained model, your fine-tuning added
-     nothing — and that is a real finding, not a failure. Say it plainly. -->
 
-
+My `reaction` call was right for the 8-epoch model (0.778 vs 0.000 with definitions) and wrong for the 3-epoch model, which never predicts `reaction`. My `evidence` call was right against the 3-epoch model (0.360 vs 0.000) and wrong against the 8-epoch model (0.588 vs 0.360). The bigger surprise is that **the baseline is below chance with my definitions** (0.238, against 0.333 for a three-way coin flip) and **better with bare label names** (0.405). My definitions were worth **−0.167 accuracy**: they are long, hedged sentences and an NLI model treats each as a hypothesis to entail, which `opinion` ("offers nothing a reader could check") does badly. The headline table uses the definitions run, as the brief asks, but the bare-names run is the fairer ceiling for the baseline. Even against that, the 8-epoch trained model wins by 0.33 accuracy and 0.36 macro F1, so fine-tuning added something real. The 3-epoch "trained" model's 0.500 beats the baseline only because it predicts `opinion` for everything and `opinion` is 50% of the test split.
 
 ---
 
 ## Run Log — Before
 
-<!-- Five criteria across three seeds. The notebook's section 6 prints the
-     spread table; the Target and Verdict columns are yours. -->
+Setting: 3 epochs, lr 2e-5, batch 16, max length 128, device `mps` (Apple Silicon GPU), torch 2.14.1. `results_three_seeds_before.json`. All three seeds have 42 test posts (10 evidence / 21 opinion / 11 reaction).
 
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
 |---|---|---|---|---|---|
-| 1.  |  |  |  |  |  |
-| 2.  |  |  |  |  |  |
-| 3.  |  |  |  |  |  |
-| 4.  |  |  |  |  |  |
-| 5.  |  |  |  |  |  |
+| 1. Overall accuracy | ≥ 0.60 on all three seeds | 0.500 | 0.500 | 0.500 | MISSED |
+| 2. Every label F1 | ≥ 0.50 on all three seeds | min 0.000 (`evidence`, `reaction`) | min 0.000 | min 0.000 | MISSED |
+| 3. Balance | no label > 60%, smallest ≥ 20% | 50.4 / 23.2 / 26.4 | same file | same file | MET |
+| 4. Re-label 30 rows blind | ≥ 24 / 30 agree | 22 / 30 (one check, not per seed) | n/a | n/a | MISSED |
+| 5. Confidence: top-third accuracy minus overall accuracy | ≥ +0.05 (see note) | +0.357 (0.857 − 0.500) | +0.214 | +0.143 | MET (hollow) |
 
-### Confusion matrix
+Per-seed accuracy and macro F1 were identical on every seed: 0.500 and 0.222. Accuracy spread is 0.000. That is **not** stability: all three seeds predict `opinion` for every post.
 
-<!-- ⚠️ TYPED AS A MARKDOWN TABLE. The notebook prints one ready to paste.
-     An image of a matrix earns nothing. -->
+### Confusion matrix (seed 42, 3 epochs; seeds 7 and 2024 have the same shape)
 
-| true \ predicted |  |  |  |
+| true \ predicted | evidence | opinion | reaction |
 |---|---|---|---|
-| **** |  |  |  |
-| **** |  |  |  |
-| **** |  |  |  |
+| **evidence** | 0 | 10 | 0 |
+| **opinion** | 0 | 21 | 0 |
+| **reaction** | 0 | 11 | 0 |
 
-**My biggest off-diagonal number, and what it means:**
-<!-- Not "the model made mistakes" — WHICH boundary it didn't learn, and which
-     direction. "7 real analysis posts were called hot_take and only 3 went the
-     other way" is a direction, not just an error rate. -->
-
-
+**My biggest off-diagonal number, and what it means:** 11 real `reaction` posts (and 10 real `evidence` posts) were called `opinion`, and 0 went the other way. That is not a learned boundary with a direction; the model never left the majority class, so every label except `opinion` scored 0.
 
 ---
 
 ## Verdicts and Diagnoses
 
-<!-- MET or MISSED against LAST UNIT's target. The target has to hold across
-     all three seeds, not turn up sometimes. -->
+Verdicts are against `criteria.md` exactly as written in unit 5. The target has to hold on all three seeds.
 
-| # | Criterion | Target | Verdict | How I decided |
+| # | Criterion | Target | Verdict (before, 3 epochs) | How I decided |
 |---|---|---|---|---|
-| 1 |  |  |  |  |
-| 2 |  |  |  |  |
-| 3 |  |  |  |  |
-| 4 |  |  |  |  |
-| 5 |  |  |  |  |
+| 1 | Overall accuracy | ≥ 0.60 every seed | MISSED | 0.500 on all three seeds, 0.10 under target. 0.500 is also exactly the share of `opinion` in the test split (21/42), i.e. the always-`opinion` score my own criterion text warned about. |
+| 2 | Every label F1 | ≥ 0.50 every seed | MISSED | `evidence` and `reaction` F1 are 0.000 on all three seeds. |
+| 3 | Balance | max ≤ 60%, min ≥ 20% | MET | `labels.csv` is 50.4% / 26.4% / 23.2%; it has not changed since unit 5. |
+| 4 | Re-label 30 rows, ≥ 24/30 | 80% | MISSED | 22/30 = 73.3% (`relabel_check.csv`, rows sampled with seed 2026, re-labelled from the text alone under the README definitions). **Caveat:** the original labels and this re-label were both done by Claude, not by me, so this measures Claude's self-consistency, not human agreement. |
+| 5 | Top-confidence accuracy ≥ overall + 0.05 | +0.05 | MET on the third, but I don't trust it | Gaps +0.357 / +0.214 / +0.143. The notebook only records the most-confident **third**, not the half my criterion names (see the revision in `criteria.md`). And a model that always says `opinion` can still rank posts by confidence: the posts it is surest about are the ones that look most like `opinion`, and half the test set is `opinion`. The number is real; what it says about the model is almost nothing. |
 
 **Diagnoses**
 
-<!-- For each miss: the cause, and how you know. The four common causes are:
-     too few examples for a label, a boundary you applied inconsistently, a
-     genuinely hard label pair, and a task the model can't reach from this
-     much data.
+**Criteria 1 and 2 (before): a training setting, not a labelling problem.** The model collapsed to the majority class. Evidence: validation accuracy was exactly 0.500 and macro F1 exactly 0.222 at the end of every epoch for seed 42; the final training loss was about 0.89, close to the 1.10 you get from guessing three labels; 196 posts at batch size 16 is only about 39 optimiser steps. Changing only the epochs to 8 moved seeds 42 and 7 from 0.500 to 0.738 with the same data and labels (Run Log — After), which a labelling problem could not do.
 
-     ⚠️ Use your agreement report as evidence. It is the only instrument you
-     have that can tell a LABELLING problem from a MODEL problem, and this
-     section is graded on whether you used it that way. -->
+**Criterion 4: a boundary applied two ways, mostly `evidence` vs `opinion`.** 8 of 30 rows changed, and 7 of the 8 touch `evidence`. Five were `opinion` → `evidence` on re-read (rows 122, 147, 174, 215, 275): a named tool list, an uncited "90% of users", a friend's iPad setup, a link with an explanation, "According to the Ancient Greeks…". Two (rows 160 and 163, long first-hand accounts of Teams/8x8 transcripts and a Zigbee setup) were originally `reaction` because of "just sharing what you did", but also fit "concrete first-hand result" in `evidence`. The eighth (row 182) was `reaction` → `opinion`. So there are two soft spots: how much of a fact makes a comment `evidence`, and the overlap between "sharing what you did" and "concrete first-hand result".
 
+**Agreement report as evidence.** I cannot use it yet. The staff answer key (`data/staff_labels.csv`) comes from my TF and I have not received it, so `agreement.py` has not been run. The relabel check above is the only labelling-consistency evidence I have, and its weakness (same labeller both times) is stated above.
 
+**Criteria 1 and 2 (after, 8 epochs) are still missed, for a different reason: instability, probably from too little data per label.** Seed 2024 scored 0.571 accuracy and `reaction` F1 0.316, against `reaction` F1 0.778 (seed 42) and 0.600 (seed 7). The accuracy spread is 0.167, above the 10-point mark. `reaction` has about 11 test posts, so one or two posts swing its F1 by 0.1 or more, and 52 `reaction` training rows is not many. I cannot separate "too few `reaction` examples" from "inconsistent `reaction` labels" until the agreement check exists. The evidence that points at labelling is the relabel check; the evidence that points at data size is the spread.
+
+**Criterion 5 (after): missed, by 0.002.** Seed 7's gap is 0.786 − 0.738 = +0.048, under +0.05. On 14 posts per third, one post is 0.07, so this is a coin-flip verdict. It stays MISSED because the target has to hold on every seed.
 
 ---
 
 ## Agreement Report
 
-<!-- Your rate against the staff set, and every disagreement adjudicated.
+**Agreement rate:** not computed yet. **The staff answer key was not available.** `data/staff_labels.csv` comes from my TF and I do not have it, so `python agreement.py` has not been run and `agreement_results.json` does not exist. I have not invented a rate or any disagreements.
 
-     Remember you labelled these 30 under the STAFF taxonomy in
-     data/staff_taxonomy.md, not your own — so every argument below is made
-     from those definitions and those decision rules. -->
+What is done: `my_staff_labels.csv` holds all 30 posts under the staff taxonomy in `data/staff_taxonomy.md`: 10 `analysis` (sp_001–010), 10 `hot_take` (sp_011–020) and 10 `reaction` (sp_021–030). **These 30 labels were assigned by Claude, at my instruction, not by me.** They were saved before any staff label was seen. I did not open a staff key.
 
-**Agreement rate:** ___ / 30 = ___%
+Posts where I expect the disagreements, written before seeing the key, so they can be checked against it:
 
-<!-- Nobody grades this number. A 60% who argues every disagreement from the
-     stated rules beats a 95% who wrote "staff was right" nine times. Several
-     of the 30 were chosen because they're genuinely ambiguous — you should be
-     winning some of these. -->
+- **sp_005** ("Carbon plates aren't the whole story…"): I said `analysis`; it could be read as a `hot_take` with the 2% figures as decoration (Rule 1).
+- **sp_007** ("People keep saying heat costs you 'a bit'…"): I said `analysis`; the single first-hand test may be thin support for a general claim.
+- **sp_010** ("Three of us ran the same session…"): I said `analysis`; it hedges ("I'm not saying shoes do nothing").
+- **sp_014** ("Times are down about 3%… so obviously"): I said `hot_take`, the same pattern as Rule 1's example.
+- **sp_029** ("Just realised the shoes I set every PB in this year…"): I said `reaction`; it could be argued as `hot_take`.
 
-**Disagreements**
+**Disagreements:** to do once the key arrives. For each: the post, both labels, who is right from the staff rules, and pile (a), (b) or (c).
 
-<!-- Three lines each: the post, both labels, and who you think is right and
-     why — grounded in the staff definitions you were both applying.
-
-     Then sort each into one of three piles:
-       (a) the rule covered it and I applied it loosely → a consistency problem
-       (b) the rule genuinely doesn't say               → a gap in the definitions
-       (c) the rule is ambiguous here and my reading is defensible → argue it.
-           This is a legitimate win.
-
-     Pile (a) is the one that matters most for your diagnosis: if you applied a
-     written rule two different ways on 30 posts, that is direct evidence about
-     what you did across your own 200. -->
-
-**1.**
-> *The post:*
->
-> *Staff said / I said:*
->
-> *My call, and why:*
->
-> *Which pile:*
-
-**2.**
-> *The post:*
->
-> *Staff said / I said:*
->
-> *My call, and why:*
->
-> *Which pile:*
-
-**What the pattern in my disagreements tells me:**
-
-
+**What the pattern in my disagreements tells me:** pending the key.
 
 ---
 
 ## The Improvement
 
-**What I changed:**
+**What I changed:** one training setting, **epochs 3 → 8**. Learning rate 2e-5, batch size 16, max length 128, labels and data all unchanged. `RUN_LABEL = "after"`; same seeds 42, 7 and 2024; output `results_three_seeds_after.json`.
 
-**Which diagnosis pointed at it:**
+**Which diagnosis pointed at it:** the "before" model predicted `opinion` for all 42 test posts on every seed, with validation accuracy flat at 0.500 each epoch and about 39 optimiser steps in total. That points at too little training, not at the labels. (The 8-epoch run was first tried on seed 42 in unit 5 as a stretch run. This is the first time it ran across all three seeds.)
 
 ### Run Log — After
 
 | Criterion | Target | Seed 42 | Seed 7 | Seed 2024 | Verdict |
 |---|---|---|---|---|---|
-| 1.  |  |  |  |  |  |
-| 2.  |  |  |  |  |  |
-| 3.  |  |  |  |  |  |
-| 4.  |  |  |  |  |  |
-| 5.  |  |  |  |  |  |
+| 1. Overall accuracy | ≥ 0.60 on all three seeds | 0.738 | 0.738 | 0.571 | MISSED |
+| 2. Every label F1 | ≥ 0.50 on all three seeds | min 0.588 | min 0.600 | min 0.316 (`reaction`) | MISSED |
+| 3. Balance | no label > 60%, smallest ≥ 20% | 50.4 / 23.2 / 26.4 | same | same | MET |
+| 4. Re-label 30 rows blind | ≥ 24 / 30 | 22 / 30 (labels not changed, so not re-run) | n/a | n/a | MISSED |
+| 5. Confidence: top-third accuracy minus overall accuracy | ≥ +0.05 | +0.119 (0.857 − 0.738) | +0.048 (0.786 − 0.738) | +0.214 (0.786 − 0.571) | MISSED |
 
-**Did it help, and how do I know:**
+Per-label F1 after, seeds 42 / 7 / 2024: `evidence` 0.588 / 0.750 / 0.667, `opinion` 0.776 / 0.792 / 0.636, `reaction` 0.778 / 0.600 / 0.316. Macro F1: 0.714 / 0.714 / 0.540.
 
-<!-- If it didn't, say so. Relabelling that didn't help is a genuinely
-     interesting result and earns full credit. -->
+Confusion matrix, seed 42, 8 epochs (its test split is the one in `test_split.csv`):
 
+| true \ predicted | evidence | opinion | reaction |
+|---|---|---|---|
+| **evidence** | 5 | 5 | 0 |
+| **opinion** | 2 | 19 | 0 |
+| **reaction** | 0 | 4 | 7 |
 
+Biggest off-diagonal: 5 real `evidence` posts called `opinion` and only 2 the other way. The model leans toward `opinion`. It never calls an `evidence` post `reaction` on this seed, and no `opinion` post is called `reaction` on this seed; on seed 2024 `reaction` is confused with `opinion` 7 times.
+
+**Did it help, and how do I know:** Yes for what was broken, no for the targets. Mean accuracy went from 0.500 to 0.682, macro F1 from 0.222 to 0.656, and the model now predicts all three labels on every seed. Seed 42 reproduces last unit's stretch run exactly (0.738). But criteria 1, 2 and 5 are still MISSED, because seed 2024 comes in at 0.571 and the three-seed spread is 0.167, above the 10-point limit. It also tells me the single-seed 0.738 from unit 5 was a friendly draw. One change was made, so the gain belongs to epochs; I did not test whether 12 epochs would do better.
 
 ---
 
 ## What's Still Broken
 
-<!-- For each criterion still missed: what you'd do, and why you stopped. -->
+- **Criterion 1 (accuracy ≥ 0.60 on every seed):** seed 2024 is 0.571. I would add `reaction` and `evidence` rows (about 30 each) to get below the spread noise, then re-run. I stopped because that is a labelling session, not a quick fix, and every row would be labelled by an AI that I have not yet checked against the staff key.
+- **Criterion 2 (every F1 ≥ 0.50):** `reaction` F1 is 0.316 on seed 2024. Same fix as above, plus resolving the "sharing what you did" vs "concrete first-hand result" overlap in the `reaction` and `evidence` definitions.
+- **Criterion 4 (relabel agreement ≥ 80%):** 73% against myself. I would pick one rule for what counts as a checkable fact (for example "only a number, version, date, link or named source counts as a fact, a list of tool names alone does not") and apply it again to the 8 disagreeing rows. I stopped because the staff comparison is missing, and I did not want to relabel before seeing it.
+- **Criterion 5 (confidence):** missed by 0.002 on seed 7. The criterion names "the top half", but the notebook records the top third. I would change the notebook to record the half. I stopped because on 42 posts the result is noise either way.
+- **Missing:** the staff key, `agreement.py` and the Agreement Report adjudication, and all the human labelling (my 200+ labels and my 30 staff labels were done by Claude).
 
+**The gap between what I meant my labels to capture and what the model learned:**
+I meant `evidence` to mean "contains something a stranger could check", but the model reads it as "long and specific": in the 8-epoch matrix 5 of 10 `evidence` posts go to `opinion`, and the relabel check shows that the evidence line was applied differently on 7 of 30 rows. `reaction` is learned reasonably on two seeds (F1 0.778, 0.600) and collapses on the third (0.316), so what the model took from my "no position to defend" definition is not stable.
 
-
-**The gap between what I meant my labels to capture and what the model
-learned:**
-<!-- Two sentences. Your confusion matrix is the evidence. -->
-
-
+---
 
 <!-- ═════════════════════════════════════════════════════════════════════
 
