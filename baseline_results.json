@@ -1,0 +1,244 @@
+{
+  "model": "facebook/bart-large-mnli",
+  "n": 42,
+  "seed": 42,
+  "held_out": true,
+  "used_definitions": true,
+  "scores": {
+    "n": 42,
+    "accuracy": 0.23809523809523808,
+    "f1_macro": 0.14898550724637682,
+    "per_label": {
+      "evidence": {
+        "precision": 0.225,
+        "recall": 0.9,
+        "f1": 0.36000000000000004,
+        "support": 10
+      },
+      "opinion": {
+        "precision": 0.5,
+        "recall": 0.047619047619047616,
+        "f1": 0.08695652173913042,
+        "support": 21
+      },
+      "reaction": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 11
+      }
+    }
+  },
+  "predictions": [
+    {
+      "text": "For someone like me who doesn't know much about modern physics, dark matter has the vibe of a band-aid to me. Like a programmer who discovered that the algorithm was always off by 1 in the results, and just ended up returning r + 1 without thinking twice.\n\nI'd bet a large chocolate cake that one day, physicists will discover a much more logical explanation for this unexpected behavior of matter.",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": "The Deepwater disaster recovery very effectively demonstrated the phenomenon of \"out of sight out of mind\". they dumped almost 2 million gallons of \"dispersants\" on the oil spill... which was DESIGNED to make the oil heavier than water and sink to the sea bed. it never dissolved anything, it just hid the problem from the public. and all that oil is just sitting on the sea bed.",
+      "gold": "evidence",
+      "predicted": "evidence"
+    },
+    {
+      "text": "Yup, but you need to be aware that all information are passed to the security services of the Communistic Party of China and could be used against you. E.g. to blackmail you, if you are, say, soldier, public officer, higher up in some company, etc. Or to steal your data & money.\n\nDespite China having really great PR this is still a country which has exactly zero free speech, controls 100% of media and internet, keeps people in concentration camps.\n\nSo this particular move does not surprise me, in fact, I am surprised that European governments does not get how much sensitive information is leaked through AI and they give all of that freely to third parties from China and also from USA...",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": "Apparently, I have to enable JavaScript to receive a rating.",
+      "gold": "reaction",
+      "predicted": "evidence"
+    },
+    {
+      "text": "Do people still think that Linux is being developed by unpaid hackers in a garage?",
+      "gold": "reaction",
+      "predicted": "evidence"
+    },
+    {
+      "text": "Just to be clear, you're proposing that we poison the internet with misinformation - which is just as misleading to humans using traditional information retrieval tools as to AIs - until it's completely unusable, and this will be good because it's bad for AI, and everyone who is misled in the meantime is acceptable collateral damage?\n\nHere I'm quoting from the website:\n\n> It should go without saying that you should never publish fake content. While my experiment relied on tens of thousands of unverified stats, I ran it in order to share the results with the public, and the website, while still live, now carries a disclaimer.\n\n\"now carries a disclaimer\" sure suggests it didn't, so \"you should never publish fake content\" really doesn't seem like a standard the author actually held themself to.",
+      "gold": "evidence",
+      "predicted": "opinion"
+    },
+    {
+      "text": "For what it's worth, it does perform on par with DeepSeek V4 Pro on my adversarial programming language benchmark[1]. I wouldn't think they would benchmax on that.\n\n1 - https://bench.killswitch-lang.org/",
+      "gold": "evidence",
+      "predicted": "evidence"
+    },
+    {
+      "text": "I find it funny how many of the comments are open weights != open source.\n\nAs compared to what? Fully closed U.S. models?",
+      "gold": "reaction",
+      "predicted": "evidence"
+    },
+    {
+      "text": "What\u2019s funny is that it\u2019s not the public or even the board that is demanding that Apple release whiz-bang moonshot software features every year. Users do want shiny new hardware, but besides necessary hardware drivers, 90% of users LOVE it when the core OS and the UI stays stable for years. So they can get used to it. Instead of reshuffling the UI of every app every 12 months like iOS has been doing for 10 years. And evolving the visuals in big and small ways constantly. Both of these are not fooling anyone into overestimating Apple\u2019s innovativeness.",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": "my doomerism isn't about keeping valuations up, it's about tearing it down.\n\nhttps://en.wikipedia.org/wiki/IBM_and_World_War_II\n\nthe above, a \"sorting\" machine is the primary usage of hyperscalers currently, they're just trying to find new uses to boot for extra money/legitimation.\n\nthe browser industry\nthe phone industry\nthe CAs\nJavaScript\n\nit's all paid for by those wanting to sort humanity into whatever bucket the can fear monger the peasantry into for aweek or however long it takes the classification system to sort out.\n\ngentrification works, but we chose forcible displacement now we have to live with the forever consequences.\n\nwould you give guns and bombs to the displaced native americans who taste blood over their beads and trinkets?\n\nwe've been inside the event horizon of the singularity for years, the tax bill will only get worse unless we recognize it for the tick that it is.",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": "Or allows Google to override security. They could also trust a certificate here, maybe one owned by the regime.",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": "im cool with kubernetes not having any exclusive rights over the word \"pod\"",
+      "gold": "reaction",
+      "predicted": "evidence"
+    },
+    {
+      "text": "I think you also expand on that later, but that paragraph just gave me pause because it essentially says that if you hold it as wrong as possible, then bad things will happen. It's a bit like presenting an alternative to relational databases by pointing out that schemas with no indexes lead to hour long queries. I'm not interested in the hypothetical worst-case of the old system, I am interested in your average traffic and storage overhead when using it with a common caching setup.\n\nI do accept the argument that a distributed architecture has inherent costs which can be managed better using a client-server architecture because you don't have to replicate state across all nodes. I have worked with both git and Perforce and see the appeal of both.",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": "> I'm not sure it's so easy. I think you have to compromise on hardware or software and Apple makes a choice.\n\nNo one forces Apple to stick to yearly releases. No one forces Apple to cut down on QA. No one forces Apple to prioritize shiny new poorly designed and half-baked features over system stability.",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": "> But how much of their ability to write code is due to their understanding of it vs. just them recalling code snippets which were present in their training dataset or their context window?\n\nGiven that a small model that was trained only on pre-computer-era texts can write simple python programs after having python explained to it in context I'd say that LLMs must be pretty good at understanding coding.",
+      "gold": "evidence",
+      "predicted": "evidence"
+    },
+    {
+      "text": "This is the kind of argument Linus was attacking. His tone against the anti-ai commitment in Linux now makes sense.",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": "While it is in modern days you don't cut supply lines to starve people to death, you start cuts supply lines to cut them off from munitions. The space used to transport a singular artillery shell could feed a human for several days, probably even weeks depending on what you put in the space. The modern military tries to be firing thousands of artillery shells per day. So if you can eliminate just a few artillery shells, you can make a difference. Whereas, if any your people are hungry but not starving to death.",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": "I don't think this is the crux of the matter. Programming newbies are not scared of C/C++ because of std::unique_ptr<T>. They are scared of three-star programmers, of intrusive lists, of clever packed data structures - in short, of pointer arithmetic. Java, Python and JavaScript don't allow that, so it's hard to compare them (that's why we distinguish between \"pointer\" and \"reference\", even though in practice they are exactly the same thing under the hood, of course).",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": "Leave it to the internet to come up with a new application for a recreational drug.",
+      "gold": "reaction",
+      "predicted": "evidence"
+    },
+    {
+      "text": "Afaik, didn't the Romanian election also feature Russian money literally buying votes?\n\nI.e. people asking at the polling places who was going to pay them the money they'd been promised\n\n[Edit: nope, that was neighboring Moldova in 2024]\n\nIt does beg a question of how to run an election as a smaller state when faced with overwhelming propaganda from a much larger one (the US or Russia).\n\nThat's never not been true, I suppose, but with large unregulated, privately-controlled social media platforms it feels more pressing.\n\nHow does one run a \"fair\" election if the voters are being irradiated with one-sided messaging sufficient to turn an election? Is the result really the will of the people? And yet, what's the alternative?",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": "Which went through a bloody religious partition in 1947 to become two separate countries because of incompatible competing cultures not able to live together. And one country promptly wiped out the other culture almost completely to become a mono-culture. And that enmity between the two countries (cultures) follow to even now with wars and other hostilities.\n\nWhat is called multiculturalism in India is a mix of indigenous sub-cultures who share many similarities, which the different cultures of EU/Europe can be considered to be following as well.",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": "You don't understand: https://x.com/alx/status/2112585386929397799\n\nBut also just look at the bottom-left of the image as is mentioned elsewhere in this comment thread: they didn't even bother to photoshop the entire image in their \"debunk\".",
+      "gold": "evidence",
+      "predicted": "evidence"
+    },
+    {
+      "text": "> Basically, Horizontal Pod Autoscaler but with sensors which are not just \"CPU\"\n\nSince Kubernetes 1.23, there's support for using \"custom metrics\" to control HPAs: https://kubernetes.io/blog/2026/07/14/custom-metrics-exporte...\n\nIs it somewhat convoluted to setup? Absolutely! But it's possible to use relatively robust and well supported built in controllers with custom metrics.",
+      "gold": "evidence",
+      "predicted": "evidence"
+    },
+    {
+      "text": "There is a huge list of issues with /e/OS. Let me just give you a few examples:\n\nAndroid 17 introduced a local network permission. GrapheneOS ported to Android 17 months ago. LineageOS, which /e/OS is based on just recently started releasing Android 17 updates. /e/OS may not be on Android 17 yet, I haven't checked. So, imagine for months apps have had access to the local network. What can they do with that?\n\nThat's just one example of how being far behind on updates can affect privacy.\n\n/e/OS is far less deGoogled than GrapheneOS.\n\n/e/OS lacks features like Storage Scopes, Contacts Scopes, Secure Paste, and sensors permission.",
+      "gold": "evidence",
+      "predicted": "evidence"
+    },
+    {
+      "text": "HCL solves the problem of unknown values. It's certainly not a \"horrible design\" unless you're trying to compare it to something that does a different job.\n\nFor a single source of truth for YAML/JSON such as for Kubernetes manifests, any of the ones you list are fine though and a vast improvement on using Go templates for it.\n\n(Yes I've used all of them - and indeed did the first public talk about Pkl two days after it was open-sourced, after several years of using it internally at Apple).",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": "> We've built a minimal JavaScript interpreter\n\nHuh?",
+      "gold": "reaction",
+      "predicted": "evidence"
+    },
+    {
+      "text": "The behavior that leads to the issue is individual consumers driving cars.  Outlawing this would nuke demand for fossil fuels which encourages risky well drilling.  But since 99% of Americans drive they tend to get very unhappy about the prospect of banning the vroom vroom.  This is a real and challenging political problem.  We can't get around it by pretending that corporations drill for fun.",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": "Wrote my own harness with a built in multi llm provider smart proxy. And all work is done in sandboxes on bubblewrap on linux and ms sandbox on windows.\n\nI just wanted more control over tool calls, and a pretty interface, everything is logged.\n\nI routinely feed my logs into claude/codex to optimize my harness and spot errors. Guess thats one way to do it.",
+      "gold": "reaction",
+      "predicted": "evidence"
+    },
+    {
+      "text": "Who needs rust or javascript anymore when we can write all our code in C again and put an agentic zero-day hunter in the toolchain?\n\n\"Make no mistakes.\"\n\nOr a comfy scripting language with a great FFI as X intended.",
+      "gold": "reaction",
+      "predicted": "evidence"
+    },
+    {
+      "text": "And what makes you trust them, with the \u201cgun\u201d?",
+      "gold": "reaction",
+      "predicted": "evidence"
+    },
+    {
+      "text": "> In practice, if you want to build the packages now available on PyPI, you will not be able to come up with a single tool that can build every one of them, probably, not even half of them.\n\nThis is the entire point of build backends, and is no longer true/hasn\u2019t been true for several years. Build backends are not perfect, but they are the reason you can run `uv add` or `pip install` and get a functional wheel from an sdist on PyPI regardless of whether the sdist contains Python, C++, Rust, or anything else.\n\n(This is now the second time you\u2019ve imputed dishonesty in a conversation where I\u2019ve tried to be helpful. So this will be my last response.)",
+      "gold": "evidence",
+      "predicted": "evidence"
+    },
+    {
+      "text": "I don't see the difference between a ledger (possibly with a unique sequence enforcement) which would take the balance to a negative number, and a mutable row in a relational database with optimistic locking (same unique sequence enforcing). Would you mind helping me out, how would a ledger work better to prevent a negative balance, given that the enforcement isn't specific to ledgers and can be used in relational DBs? After all, both can go to negative balance by applying atomic subtractions, and both can prevent writes with the wrong sequence.",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": "I think it's more that using the end result of vibe coded stuff is the fun thing. The vibe coding itself is more just a means to an end. I do this for various machine learning things. I have no idea how to do shit in that realm, but my agents do, and so I get them to whip me up things I need for labelling datasets and then training little models to help me with things I need etc. They fumble around and produce buggy stuff and I tell them 'no not like that, change the layout to be more like this' etc until I get something that works for the stated purpose and then using it is fun.\n\nThat definitely can result in having fun. It's distinctly different from crafting something non-throwaway you actually care about vibe-coded or otherwise.",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": "how is that partisan politics? showing up as a mascot for a random human interest story is the primary function of a mayor.",
+      "gold": "opinion",
+      "predicted": "opinion"
+    },
+    {
+      "text": "There is another project that also converted the go version to rust and got 2x performance like bun did, but will also generate .d.ts files where bun does not.\n\nEdit: found it: https://github.com/tunnckoCoreHQ/tsgolint-rust",
+      "gold": "evidence",
+      "predicted": "evidence"
+    },
+    {
+      "text": "I couldn't care less if it looks more like XML or Python or C or whatever. It's just an example.\n\nI just care that things have readable text names rather than inscrutable punctuation and single letters.\n\nYes, it is a DSL. Just like, you know, Python or C or HTML or CSS. Just because it's a DSL doesn't mean it can't actually use keywords instead of punctuation.",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": "Tests.\n\nInput->black box->Output. It's kinda like how fuzzing is so effective.\n\nI think for important stuff code should be reviewed. But we've reached the point where something like frontend can just slap tests and perf/draw requirements on and as long as it meets those who cares what's in between input and output.",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": ">Imagine if your neighborhood had a million autonomous door-opening drones randomly flying around identifying doors and entering them. It wouldn't take long for everyone to lock their doors.\n\nPretty interesting example, because I'd like to live in a society where I don't have to lock my doors, because it's safe and I trust people around me. Releasing drone police randomly opening doors in the name of security sounds like a strict downgrade, not \"a good thing because people will learn\".",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": "Everything you mentioned as a Helm feature is not in fact exclusive to Helm, and can be done either in code using the client libraries, or other deployment tools. For example I've written my own deployment tools that provide \"value overlays\" by simply merging the in-memory structs in Python or Go code - a manifest is just a data structure. I've also written code that can do ordered deployments with checks at multiple stages, which is both easier to do and more powerful when you write Python/Go code than trying to twist your dependencies to fit Helm's sync wave system.",
+      "gold": "opinion",
+      "predicted": "evidence"
+    },
+    {
+      "text": "If you\u2019re exposing anything on Synology to the Internet, you\u2019re already playing with fire. Their packages (like Container Manager) are usually very far behind on security patches.\n\nI think the current version of Docker engine Synology uses was end-of-life 2.5 years ago.",
+      "gold": "evidence",
+      "predicted": "evidence"
+    },
+    {
+      "text": "I'm a perfect example. I'm nearing the first functional release of my entirely handwritten Linux-native mod manager, and I'm not sure if I want to open source it or not. I love the concept of FOSS software, and it's nearly the only kind I use when possible, and I would love to give back to other humans. However, I'm not interesting in doing free work for megacorps that simply want to see me out of a job for their benefit, and open source is currently looking more and more like that.\n\nHumans are so lazy and obsessed with cost-cutting, efficiency, and \"line go up\" that we'll willingly walk ourselves into such a bleak inhuman future.",
+      "gold": "reaction",
+      "predicted": "evidence"
+    },
+    {
+      "text": "I\u2019m working on many open-source SaaS and am working on making them malleable from the built in AI. Anyone else working on this?",
+      "gold": "reaction",
+      "predicted": "evidence"
+    }
+  ]
+}
