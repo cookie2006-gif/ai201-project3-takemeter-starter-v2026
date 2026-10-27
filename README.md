@@ -189,8 +189,8 @@ I used an AI model (Claude Code) to do most of this unit's work at my instructio
 | F1 — `label_two` |  |  |  |
 
 **What I predicted before I looked:**
-<!-- Milestone 1 asks you to write this BEFORE seeing the trained numbers. A
-     prediction made afterwards isn't one. -->
+
+The trained model will beat the zero-shot baseline on `reaction` (short jokes, feelings and bare questions have surface cues that fine-tuning picks up quickly) and the baseline will be at least as good on `evidence` (it can read "a number, version, date or link" directly from my definitions, whereas the trained model has only about 45 evidence examples). Caveat, stated honestly: I had already seen last unit's `results.json` and `results_epochs8.json` (accuracy 0.500 and 0.738), but I had not opened the baseline's output when I wrote this. `baseline.py` had been run once with its output redirected to a file I had not read.
 
 **What the gap actually means:**
 <!-- If the baseline matched your trained model, your fine-tuning added
